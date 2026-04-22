@@ -1,20 +1,26 @@
 @import "tailwindcss";
 
+/* ========================================================================
+     GLOBAL CSS VARIABLES
+     ======================================================================== */
 :root {
-  /* color palette */
-  --theme-background: #000000ff;
-  --theme-foreground: #f1e9dbff;
-  --theme-secondary: #f1e9db80;
-  --theme-secondary-light: #f1e9db33;
+  /* Color Palette */
+  --theme-background: #000;
+  --theme-foreground: #f1e9db;
+  --theme-secondary: #f1e9dbcc; /* 80% */
+  --theme-secondary-light: #f1e9db55; /* 33% */
   --theme-overlay: #f1e9db14;
-  --theme-inverted-foreground: #6b6b6bff;
+  --theme-inverted-foreground: #6b6b6b;
   --theme-inverted-foreground-overlay: #6b6b6b80;
-  --theme-hightlight: #31ce36ff;
+  --theme-highlight: #31ce36;
 
-  /* images */
+  /* Images */
   --home-header-image: url("../../public/images/background-image.png");
 }
 
+/* ========================================================================
+     BASE ELEMENTS
+     ======================================================================== */
 body {
   background: var(--theme-background);
   color: var(--theme-foreground);
@@ -22,141 +28,128 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Fonts */
+/* Font Utility Classes */
 .font-moho-condensed {
   font-family: var(--font-moho-condensed), Helvetica, sans-serif;
 }
 
-/* Paddings and Margins */
+/* ========================================================================
+     LAYOUT UTILITIES
+     ======================================================================== */
 .theme-default-padding-x {
-  @apply px-[50px];
+  padding-left: 25px;
+  padding-right: 25px;
 }
-
 @media (min-width: 768px) {
   .theme-default-padding-x {
-    @apply px-[100px];
+    padding-left: 100px;
+    padding-right: 100px;
   }
 }
-
 .theme-default-padding-y {
-  @apply py-[50px];
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
-
 @media (min-width: 768px) {
   .theme-default-padding-y {
-    @apply py-[100px];
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 }
 
-/* Font colors */
+/* ========================================================================
+     COLOR UTILITY CLASSES
+     ======================================================================== */
+/* Font Colors */
 .theme-background {
   color: var(--theme-background);
 }
-
 .theme-foreground {
   color: var(--theme-foreground);
 }
-
 .theme-secondary {
   color: var(--theme-secondary);
 }
-
 .theme-secondary-light {
   color: var(--theme-secondary-light);
 }
-
 .theme-overlay {
   color: var(--theme-overlay);
 }
-
 .theme-inverted-foreground {
   color: var(--theme-inverted-foreground);
 }
-
 .theme-inverted-foreground-overlay {
   color: var(--theme-inverted-foreground-overlay);
 }
-
 .theme-highlight {
-  color: var(--theme-hightlight);
+  color: var(--theme-highlight);
 }
 
-/* Background colors */
+/* Background Colors */
 .theme-bg-background {
   background-color: var(--theme-background);
 }
-
 .theme-bg-foreground {
   background-color: var(--theme-foreground);
 }
-
 .theme-bg-secondary {
   background-color: var(--theme-secondary);
 }
-
 .theme-bg-secondary-light {
   background-color: var(--theme-secondary-light);
 }
-
 .theme-bg-overlay {
   background-color: var(--theme-overlay);
 }
-
 .theme-bg-inverted-foreground {
   background-color: var(--theme-inverted-foreground);
 }
-
 .theme-bg-inverted-foreground-overlay {
   background-color: var(--theme-inverted-foreground-overlay);
 }
-
 .theme-bg-highlight {
-  background-color: var(--theme-hightlight);
+  background-color: var(--theme-highlight);
 }
 
-/* Border colors  */
+/* Border Colors */
 .theme-border-background {
   border-color: var(--theme-background);
 }
-
 .theme-border-foreground {
   border-color: var(--theme-foreground);
 }
-
 .theme-border-secondary {
   border-color: var(--theme-secondary);
 }
-
 .theme-border-secondary-light {
   border-color: var(--theme-secondary-light);
 }
-
 .theme-border-overlay {
   border-color: var(--theme-overlay);
 }
-
 .theme-border-inverted-foreground {
   border-color: var(--theme-inverted-foreground);
 }
-
 .theme-border-inverted-foreground-overlay {
   border-color: var(--theme-inverted-foreground-overlay);
 }
-
 .theme-border-highlight {
-  border-color: var(--theme-hightlight);
+  border-color: var(--theme-highlight);
 }
 
+/* ========================================================================
+     EFFECTS
+     ======================================================================== */
 .radial-mask {
   -webkit-mask-image: radial-gradient(
     circle at center,
-    rgba(0, 0, 0, 1) 40%,
+    rgba(0, 0, 0, 1) 30%,
     rgba(0, 0, 0, 0) 70%
   );
-
   mask-image: radial-gradient(
     circle at center,
-    rgba(0, 0, 0, 1) 40%,
+    rgba(0, 0, 0, 1) 30%,
     rgba(0, 0, 0, 0) 70%
   );
 }
