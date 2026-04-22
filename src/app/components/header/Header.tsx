@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Badge from "../badges/Badge";
+import { MenuIcon } from "../icons/Icons";
 
 const Header = () => {
   return (
@@ -11,20 +13,23 @@ const Header = () => {
               alt="Logo"
               width={60}
               height={60}
-              className="rounded-full grayscale brightness-90 contrast-110"
+              className="rounded-full w-12 h-12 sm:w-16 sm:h-16 grayscale brightness-90 contrast-110"
             />
             <div>
-              <p className="font-bold text-lg">Chamith Hirusha</p>
-              <p className="font-bold text-sm uppercase theme-secondary">Full stack engineer</p>
+              <p className="font-bold text-md sm:text-lg">Chamith Hirusha</p>
+              <p className="font-bold text-xs sm:text-sm uppercase theme-secondary">
+                Full stack engineer
+              </p>
             </div>
           </div>
-
-          <div className="flex flex-row sm:flex hidden gap-3 justify-center items-center px-5 py-2 h-fit rounded-full border-2 theme-border-secondary-light">
-            <div className="theme-bg-highlight rounded-full w-2 h-2"></div>
-            <span className="uppercase text-sm theme-secondary">Open to work</span>
-          </div>
+          <Badge label="Open to work" showDot textColor="theme-secondary" />
         </div>
-        nav
+        <div className="flex items-center justify-center h-10">
+          <MenuIcon
+            className="cursor-pointer size-12 md:size-18 lg:size-24"
+            strokeWidth={0.5}
+          />
+        </div>
       </div>
     </header>
   );
