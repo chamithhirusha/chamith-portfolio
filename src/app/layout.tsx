@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { Consolas, MohoCondensed } from "./fonts/fonts";
 import Header from "./components/header/Header";
+import ScrollProvider from "./components/scroll-provider/ScrollProvider";
+import Cursor from "./components/cursor/Cursor";
 
 export const metadata: Metadata = {
   title: "Chamith Hirusha — Portfolio",
@@ -19,11 +21,14 @@ export default function RootLayout({
       <body
         className={`${Consolas.variable} ${MohoCondensed.variable} h-full antialiased`}
       >
-        <Header />
+        <Cursor />
+        <ScrollProvider>
+          <Header />
 
-        <main>{children}</main>
+          <main>{children}</main>
 
-        {/* <Footer /> */}
+          {/* <Footer /> */}
+        </ScrollProvider>
       </body>
     </html>
   );

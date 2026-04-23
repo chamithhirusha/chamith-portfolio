@@ -200,6 +200,23 @@ body {
 }
 
 /* ========================================================================
+     CURSOR
+     ======================================================================== */
+.custom-cursor {
+  width: 10px;
+  height: 10px;
+  background-color: var(--theme-foreground);
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: difference;
+}
+
+/* ========================================================================
      EFFECTS
      ======================================================================== */
 .radial-mask {
