@@ -59,10 +59,10 @@ const Header = () => {
               </p>
             </div>
           </div>
-          <Badge label="Open to work" showDot textColor="theme-secondary" />
+          <Badge label="Open to work" showDot textColor="theme-secondary" className="sm:flex hidden" textClassName="uppercase" />
         </div>
 
-        <div className="flex items-center justify-center h-10">
+        <div className="flex items-center justify-center h-10 clickable">
           <MenuIcon
             className="cursor-pointer size-12 md:size-18 lg:size-24"
             strokeWidth={0.5}
