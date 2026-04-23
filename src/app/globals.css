@@ -162,14 +162,6 @@ body {
   );
 }
 
-.slider:hover .slider-track {
-  animation-duration: 50s;
-}
-
-.slider:hover .slider-item-icon {
-  animation-duration: 100s;
-}
-
 .slider-track {
   display: flex;
   width: max-content;
