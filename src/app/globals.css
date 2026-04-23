@@ -139,6 +139,75 @@ body {
 }
 
 /* ========================================================================
+     TEXT SLIDER
+     ======================================================================== */
+.slider {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 10%,
+    black 90%,
+    transparent
+  );
+}
+
+.slider:hover .slider-track {
+  animation-duration: 50s;
+}
+
+.slider:hover .slider-item-icon {
+  animation-duration: 100s;
+}
+
+.slider-track {
+  display: flex;
+  width: max-content;
+  animation: scroll 100s linear infinite;
+}
+
+.slider-group {
+  display: flex;
+  align-items: center;
+}
+
+.slider-item {
+  flex: 0 0 auto;
+}
+
+.slider-item-icon {
+  animation: rotate 4s linear infinite;
+}
+
+@keyframes scroll {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -50%;
+  }
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+
+/* ========================================================================
      EFFECTS
      ======================================================================== */
 .radial-mask {
