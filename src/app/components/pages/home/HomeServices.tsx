@@ -87,7 +87,7 @@ export default function HomeServices() {
               <div className="flex flex-col gap-[20px] xl:gap-[30px] w-full xl:w-5/8">
                 {service.items.map((item, i) => (
                   <div key={i} className="flex flex-col gap-[20px]">
-                    <h4 className="font-bold text-[24px] xl:text-[36px] theme-secondary">
+                    <h4 className="font-bold text-[18px] md:text-[24px] xl:text-[36px] theme-secondary">
                       {item}
                     </h4>
                     {i !== service.items.length - 1 && (
