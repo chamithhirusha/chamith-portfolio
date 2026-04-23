@@ -7,7 +7,7 @@
   /* Color Palette */
   --theme-background: #000;
   --theme-foreground: #f1e9db;
-  --theme-secondary: #f1e9dbcc; /* 80% */
+  --theme-secondary: #f1e9db80;
   --theme-secondary-light: #f1e9db55; /* 33% */
   --theme-overlay: #f1e9db14;
   --theme-inverted-foreground: #6b6b6b;
@@ -166,6 +166,10 @@ body {
   display: flex;
   width: max-content;
   animation: scroll 100s linear infinite;
+}
+
+.slider-reverse {
+  animation-direction: reverse;
 }
 
 .slider-group {
