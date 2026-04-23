@@ -3,29 +3,30 @@ import { SpecialStarIcon } from "../icons/Icons";
 interface Props {
   text: string;
   noIcon?: boolean;
+  reverse?: boolean;
 }
 
-const TextSlider = ({ text, noIcon }: Props) => {
+const TextSlider = ({ text, noIcon, reverse }: Props) => {
   return (
     <div className="slider gap-[25px] md:gap-[50px] theme-default-padding-y">
-      <div className="slider-track gap-[25px] md:gap-[50px]">
+      <div
+        className={`slider-track gap-[25px] md:gap-[50px] ${
+          reverse ? "slider-reverse" : ""
+        }`}
+      >
         <div className="slider-group gap-[25px] md:gap-[50px]">
-          <SliderItem text={text} noIcon={noIcon} />
-          <SliderItem text={text} noIcon={noIcon} />
-          <SliderItem text={text} noIcon={noIcon} />
-          <SliderItem text={text} noIcon={noIcon} />
-          <SliderItem text={text} noIcon={noIcon} />
+          {Array.from({ length: 6 }).map((_, index) => (
+            <SliderItem key={index} text={text} noIcon={noIcon} />
+          ))}
         </div>
 
         <div
           className="slider-group gap-[25px] md:gap-[50px]"
           aria-hidden="true"
         >
-          <SliderItem text={text} noIcon={noIcon} />
-          <SliderItem text={text} noIcon={noIcon} />
-          <SliderItem text={text} noIcon={noIcon} />
-          <SliderItem text={text} noIcon={noIcon} />
-          <SliderItem text={text} noIcon={noIcon} />
+          {Array.from({ length: 6 }).map((_, index) => (
+            <SliderItem key={index} text={text} noIcon={noIcon} />
+          ))}
         </div>
       </div>
     </div>

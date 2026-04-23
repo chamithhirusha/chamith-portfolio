@@ -1,6 +1,7 @@
-import TextSlider from "./components/text-slider/TextSlider";
-import HomeHeader from "./components/pages/home/header/HomeHeader";
-import HomeLatestProjects from "./components/pages/home/header/HomeLatestProjects";
+import TextSlider from "./components/sliders/TextSlider";
+import HomeHeader from "./components/pages/home/HomeHeader";
+import HomeLatestProjects from "./components/pages/home/HomeLatestProjects";
+import HomeServices from "./components/pages/home/HomeServices";
 
 export default function Home() {
   return (
@@ -13,6 +14,15 @@ export default function Home() {
 
       {/* Latest Projects */}
       <HomeLatestProjects />
+
+      {/* Text slider */}
+      <TextSlider text="Services" reverse />
+
+      {/* Services */}
+      <HomeServices />
+
+      {/* Text slider */}
+      <TextSlider text="Contacts" />
     </>
   );
 }

@@ -35,23 +35,7 @@ export default function HomeLatestProjects() {
         "https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?q=80&w=1676&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       tags: ["JavaScript", "Vue.js"],
       redirectUrl: "https://example.com/project4",
-    },
-    {
-      title: "Project 5",
-      description: "Description of Project 5",
-      image:
-        "https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?q=80&w=1676&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      tags: ["Go", "Gin"],
-      redirectUrl: "https://example.com/project5",
-    },
-    {
-      title: "Project 6",
-      description: "Description of Project 6",
-      image:
-        "https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?q=80&w=1676&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      tags: ["Ruby", "Rails"],
-      redirectUrl: "https://example.com/project6",
-    },
+    }
   ];
 
   return (
