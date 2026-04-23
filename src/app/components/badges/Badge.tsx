@@ -4,12 +4,13 @@ interface Props {
   dotColor?: string;
   className?: string;
   textColor?: string;
+  textClassName?: string;
 }
 
 const Badge = (props: Props) => {
   return (
     <div
-      className={`flex flex-row sm:flex hidden gap-3 justify-center items-center px-5 py-2 h-fit rounded-full border-2 theme-border-secondary-light ${props.className || ""}`}
+      className={`flex flex-row gap-3 justify-center items-center px-5 py-2 h-fit rounded-full border-2 theme-border-secondary-light ${props.className || ""}`}
     >
       {props.showDot && (
         <div
@@ -17,7 +18,7 @@ const Badge = (props: Props) => {
         ></div>
       )}
       <span
-        className={`uppercase text-sm ${props.textColor || "theme-foreground"}`}
+        className={`text-sm ${props.textColor || "theme-foreground"} ${props.textClassName || ""}`}
       >
         {props.label}
       </span>

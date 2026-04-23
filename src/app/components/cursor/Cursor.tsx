@@ -23,13 +23,23 @@ export default function Cursor() {
       const dx = mouseX - currentX;
       const dy = mouseY - currentY;
 
-      // smoother easing (lower = smoother, higher = snappier)
-      const ease = 0.1;
+      const ease = 0.2;
 
       currentX += dx * ease;
       currentY += dy * ease;
 
-      cursor.style.transform = `translate3d(${currentX}px, ${currentY}px, 0)`;
+      cursor.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) translate(-50%, -50%)`;
+
+      const el = document.elementFromPoint(
+        currentX,
+        currentY,
+      ) as HTMLElement | null;
+
+      if (el?.closest(".clickable")) {
+        cursor.classList.add("cursor-hover");
+      } else {
+        cursor.classList.remove("cursor-hover");
+      }
 
       requestAnimationFrame(animate);
     };
