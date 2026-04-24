@@ -36,7 +36,7 @@ const TextSlider = ({ text, noIcon, reverse }: Props) => {
 const SliderItem = ({ text, noIcon }: Props) => {
   return (
     <div className="slider-item gap-[25px] md:gap-[50px] h-15 md:h-30 flex items-center">
-      <h2 className="font-moho-condensed text-[80px] md:text-[160px] tracking-wider font-bold uppercase">
+      <h2 className="font-moho-condensed text-[80px] md:text-[160px] tracking-wider font-black uppercase">
         {text}
       </h2>
       {!noIcon && (

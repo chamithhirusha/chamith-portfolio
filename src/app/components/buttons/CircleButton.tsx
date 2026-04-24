@@ -19,14 +19,22 @@ export default function CircleButton({
   arrowDirection = "down-left",
 }: Props) {
   return (
-    <div className="inline-flex w-fit clickable aspect-square cursor-pointer items-center justify-center gap-2 rounded-full border-2 theme-border-foreground px-5 py-5">
-      <p className="text-sm md:text-lg font-bold uppercase whitespace-nowrap">
+    <div className="group stick-here circle-button inline-flex w-fit aspect-square cursor-pointer items-center justify-center gap-2 px-5 py-5">
+      {/* TEXT */}
+      <p className="text-sm md:text-lg font-bold uppercase whitespace-nowrap transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] group-hover:translate-x-1 group-hover:opacity-90">
         {text}
       </p>
 
+      {/* ICON */}
       {!noIcon && (
         <ArrowDownLeftIcon
-          className={`size-3 md:size-4 transition-transform duration-200 ${arrowClass[arrowDirection]}`}
+          className={`
+            size-3 md:size-4
+            transition-all duration-500
+            ease-[cubic-bezier(0.16,1,0.3,1)]
+            ${arrowClass[arrowDirection]}
+            group-hover:translate-x-1 group-hover:-translate-y-1 group-hover:scale-110
+          `}
           strokeWidth={3}
         />
       )}

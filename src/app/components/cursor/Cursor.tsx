@@ -11,6 +11,7 @@ export default function Cursor() {
 
     let mouseX = 0;
     let mouseY = 0;
+
     let currentX = 0;
     let currentY = 0;
 
@@ -19,27 +20,59 @@ export default function Cursor() {
       mouseY = e.clientY;
     };
 
-    const animate = () => {
-      const dx = mouseX - currentX;
-      const dy = mouseY - currentY;
+    const getState = () => {
+      const el = document.elementFromPoint(
+        mouseX,
+        mouseY,
+      ) as HTMLElement | null;
 
-      const ease = 0.2;
+      const clickable = el?.closest(".clickable");
+      const circleButton = el?.closest(".stick-here") as HTMLElement | null;
+
+      if (circleButton) {
+        const rect = circleButton.getBoundingClientRect();
+
+        return {
+          x: rect.left + rect.width / 2,
+          y: rect.top + rect.height / 2,
+          isSticky: true,
+          isHover: true,
+        };
+      }
+
+      if (clickable) {
+        return {
+          x: mouseX,
+          y: mouseY,
+          isSticky: false,
+          isHover: true,
+        };
+      }
+
+      return {
+        x: mouseX,
+        y: mouseY,
+        isSticky: false,
+        isHover: false,
+      };
+    };
+
+    const animate = () => {
+      const state = getState();
+
+      const dx = state.x - currentX;
+      const dy = state.y - currentY;
+
+      const ease = state.isSticky ? 0.12 : 0.2;
 
       currentX += dx * ease;
       currentY += dy * ease;
 
       cursor.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) translate(-50%, -50%)`;
 
-      const el = document.elementFromPoint(
-        currentX,
-        currentY,
-      ) as HTMLElement | null;
-
-      if (el?.closest(".clickable")) {
-        cursor.classList.add("cursor-hover");
-      } else {
-        cursor.classList.remove("cursor-hover");
-      }
+      // Hover + sticky states combined
+      cursor.classList.toggle("cursor-hover", state.isHover);
+      cursor.classList.toggle("cursor-sticky", state.isSticky);
 
       requestAnimationFrame(animate);
     };

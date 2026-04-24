@@ -64,7 +64,7 @@ const Header = () => {
 
         <div className="flex items-center justify-center h-10 clickable">
           <MenuIcon
-            className="cursor-pointer size-12 md:size-18 lg:size-24"
+            className="cursor-pointer stick-here size-12 md:size-18 lg:size-24"
             strokeWidth={0.5}
           />
         </div>
