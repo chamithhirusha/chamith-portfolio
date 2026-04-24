@@ -6,7 +6,7 @@ interface Props {
 
 export default function Link({ text, link, className }: Props) {
   return (
-    <a href={link} className={`hover:underline ${className}`}>
+    <a href={link} className={`clickable hover:underline ${className}`}>
       {text}
     </a>
   );

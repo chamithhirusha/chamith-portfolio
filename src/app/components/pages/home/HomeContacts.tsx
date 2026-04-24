@@ -78,14 +78,14 @@ export default function HomeContacts() {
           />
         </div>
         <Checkbox
-          label="I agree to the terms and conditions"
+          label="I agree to the terms and conditions."
           labelClassName="text-[18px] md:text-[24px] font-bold theme-secondary"
           className="p-3 mr-[10px]"
         />
         <Button
           text="Send Message"
           varient="secondary"
-          className="text-[18px] md:text-[24px] xl:text-[32px] uppercase py-[10px]! px-[10px]! md:mb-[20px]"
+          className="text-[18px] md:text-[24px] xl:text-[32px] uppercase py-[10px]! px-[10px]! mb-[20px]"
         />
       </div>
     </div>
