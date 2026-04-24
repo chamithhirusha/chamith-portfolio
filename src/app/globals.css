@@ -242,6 +242,76 @@ body {
 }
 
 /* ========================================================================
+     INPUTS
+     ======================================================================== */
+.btn-primary {
+  background-color: var(--theme-foreground);
+  color: var(--theme-background);
+  padding: 3px 5px;
+  border: none;
+  border-radius: 600px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: var(--theme-background);
+  color: var(--theme-foreground);
+}
+
+.btn-secondary {
+  background-color: var(--theme-background);
+  color: var(--theme-foreground);
+  padding: 3px 5px;
+  border: none;
+  border-radius: 600px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-secondary:hover {
+  background-color: var(--theme-foreground);
+  color: var(--theme-background);
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  appearance: none;
+  -webkit-appearance: none;
+
+  background-color: transparent;
+  border: 2px solid var(--theme-secondary);
+  border-radius: 200px;
+
+  cursor: pointer;
+  display: grid;
+  place-content: center;
+
+  transition: all 0.2s ease;
+}
+
+.checkbox:checked {
+  background-color: var(--theme-foreground);
+  border-color: var(--theme-foreground);
+}
+
+.checkbox::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  transform: scale(0);
+  transition: transform 0.15s ease;
+
+  background: var(--theme-background);
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0, 43% 62%);
+}
+
+.checkbox:checked::before {
+  transform: scale(1);
+}
+
+/* ========================================================================
      EFFECTS
      ======================================================================== */
 .radial-mask {
