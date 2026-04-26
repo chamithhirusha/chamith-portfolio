@@ -1,0 +1,67 @@
+{
+  "PROFILE": {
+    "EMAIL": {
+      "TEXT": "chamithhirusha99@gmail.com",
+      "URL": "mailto:chamithhirusha99@gmail.com"
+    },
+    "PHONE": {
+      "TEXT": "+94 77 843 8869",
+      "URL": "tel:+94778438869"
+    },
+    "WHATSAPP": {
+      "TEXT": "WhatsApp",
+      "URL": "https://wa.me/94787547957"
+    },
+    "FACEBOOK": {
+      "TEXT": "Facebook",
+      "URL": "https://www.facebook.com/chamith.hirusha.9"
+    },
+    "LINKEDIN": {
+      "TEXT": "Linkedin",
+      "URL": "https://www.linkedin.com/in/chamithh/"
+    },
+    "GITHUB": {
+      "TEXT": "Github",
+      "URL": "https://github.com/chamithhirusha"
+    },
+    "RESUME": {
+      "TEXT": "Resume",
+      "URL": "/files/Chamith_Hirusha_Resume.pdf"
+    },
+    "LOCATION": {
+      "TEXT": "Colombo, Sri Lanka",
+      "URL": "https://www.google.com/maps/place/Colombo,+Sri+Lanka"
+    }
+  },
+
+  "PROJECTS": [
+    {
+      "TITLE": "Project 1",
+      "DESCRIPTION": "Description of Project 1",
+      "IMAGE": "https://images.unsplash.com/photo-1700667282848-994df515c0d7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "TAGS": ["React", "Next.js"],
+      "REDIRECT_URL": "https://example.com/project1"
+    },
+    {
+      "TITLE": "Project 2",
+      "DESCRIPTION": "Description of Project 2",
+      "IMAGE": "https://images.unsplash.com/photo-1548949974-54c5fc17dd45?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "TAGS": ["Node.js", "Express"],
+      "REDIRECT_URL": "https://example.com/project2"
+    },
+    {
+      "TITLE": "Project 3",
+      "DESCRIPTION": "Description of Project 3",
+      "IMAGE": "https://images.unsplash.com/photo-1691397119215-5e7bb8a10118?q=80&w=2120&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by=1&ixid=M3wxMjA3fDB8fHx8fA%3D%3D",
+      "TAGS": ["Python", "Django"],
+      "REDIRECT_URL": "https://example.com/project3"
+    },
+    {
+      "TITLE": "Project 4",
+      "DESCRIPTION": "Description of Project 4",
+      "IMAGE": "https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?q=80&w=1676&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "TAGS": ["JavaScript", "Vue.js"],
+      "REDIRECT_URL": "https://example.com/project4"
+    }
+  ]  
+}

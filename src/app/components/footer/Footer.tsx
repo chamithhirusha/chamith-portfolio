@@ -1,11 +1,13 @@
 import Link from "../buttons/Link";
 import SocialMediaIcon from "../buttons/SocialMediaIcon";
+import { PROFILE } from "@/app/config.json";
 
 const Footer = () => {
   const SOCIAL_LINKS = [
-    { type: "whatsapp", link: "aaa.com" },
-    { type: "linkedin", link: "aaa.com" },
-    { type: "facebook", link: "aaa.com" },
+    { type: "whatsapp", link: PROFILE.WHATSAPP.URL },
+    { type: "linkedin", link: PROFILE.LINKEDIN.URL },
+    { type: "facebook", link: PROFILE.FACEBOOK.URL },
+    { type: "github", link: PROFILE.GITHUB.URL },
   ] as const;
 
   return (
@@ -29,8 +31,9 @@ const Footer = () => {
           <div className="relative xl:absolute w-full xl:w-auto left-1/2 -translate-x-1/2 flex justify-center items-center py-[10px] md:py-[20px] px-[10px] md:px-[50px] border-2 theme-border-secondary rounded-full">
             <h4 className="text-[18px] md:text-[24px] font-bold">
               <Link
-                text="chamithhirusha99@gmail.com"
-                link="mailto:chamithhirusha99@gmail.com"
+                text={PROFILE.EMAIL.TEXT}
+                link={PROFILE.EMAIL.URL}
+                target="_blank"
               />
             </h4>
           </div>

@@ -1,9 +1,9 @@
-import { FacebookIcon, LinkedinIcon, WhatsappIcon } from "../icons/Icons";
+import { FacebookIcon, GithubIcon, LinkedinIcon, WhatsappIcon } from "../icons/Icons";
 
 interface Props {
   text?: string;
   link: string;
-  type: "whatsapp" | "linkedin" | "facebook";
+  type: "whatsapp" | "linkedin" | "facebook" | "github";
   className?: string;
 }
 
@@ -11,6 +11,7 @@ const iconMap = {
   whatsapp: WhatsappIcon,
   linkedin: LinkedinIcon,
   facebook: FacebookIcon,
+  github: GithubIcon,
 };
 
 export default function SocialMediaIcon({

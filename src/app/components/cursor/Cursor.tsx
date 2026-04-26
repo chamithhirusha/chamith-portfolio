@@ -9,8 +9,8 @@ export default function Cursor() {
     const cursor = cursorRef.current;
     if (!cursor) return;
 
-    let mouseX = 0;
-    let mouseY = 0;
+    let mouseX = -10;
+    let mouseY = -10;
 
     let currentX = 0;
     let currentY = 0;

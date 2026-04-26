@@ -13,9 +13,6 @@
   --theme-inverted-foreground: #6b6b6b;
   --theme-inverted-foreground-overlay: #6b6b6b80;
   --theme-highlight: #31ce36;
-
-  /* Images */
-  --home-header-image: url("../../public/images/background-image.png");
 }
 
 /* ========================================================================
