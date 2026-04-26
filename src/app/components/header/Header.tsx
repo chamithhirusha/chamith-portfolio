@@ -4,8 +4,10 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Badge from "../badges/Badge";
 import { MenuIcon } from "../icons/Icons";
+import { useRouter } from "next/navigation";
 
 const Header = () => {
+  const { push } = useRouter();
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
 
@@ -40,7 +42,10 @@ const Header = () => {
         }`}
       >
         <div className="flex flex-row items-center gap-20">
-          <div className="flex flex-row items-center gap-4">
+          <div
+            className="flex clickable flex-row items-center gap-4"
+            onClick={() => push("/")}
+          >
             <Image
               src="/images/avatar-200x200.jpg"
               alt="Logo"
@@ -59,7 +64,13 @@ const Header = () => {
               </p>
             </div>
           </div>
-          <Badge label="Open to work" showDot textColor="theme-secondary" className="sm:flex hidden" textClassName="uppercase" />
+          <Badge
+            label="Open to work"
+            showDot
+            textColor="theme-secondary"
+            className="sm:flex hidden"
+            textClassName="uppercase"
+          />
         </div>
 
         <div className="flex items-center justify-center h-10 clickable">
