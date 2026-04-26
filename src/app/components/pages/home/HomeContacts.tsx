@@ -4,28 +4,29 @@ import { SolidCameraIcon } from "../../icons/Icons";
 import Checkbox from "../../inputs/Checkbox";
 import TextArea from "../../inputs/TextArea";
 import TextField from "../../inputs/TextField";
+import { PROFILE } from "@/app/config.json";
 
 const contactData = [
   {
     label: "e-mail",
-    value: "chamithhirusha99@gmail.com",
-    url: "mailto:chamithhirusha99@gmail.com",
+    value: PROFILE.EMAIL.TEXT,
+    url: PROFILE.EMAIL.URL,
   },
   {
     label: "Phone",
-    value: "+94 77 843 8869",
-    url: "tel:+94778438869",
+    value: PROFILE.PHONE.TEXT,
+    url: PROFILE.PHONE.URL,
   },
   {
     label: "Location",
-    value: "Colombo, Sri Lanka",
-    url: "",
+    value: PROFILE.LOCATION.TEXT,
+    url: PROFILE.LOCATION.URL,
   },
 ];
 
 export default function HomeContacts() {
   return (
-    <div className="flex flex-col lg:flex-row theme-default-padding-x theme-default-padding-y gap-[50px] md:gap-[80px]">
+    <div id="home-contacts" className="flex flex-col lg:flex-row theme-default-padding-x theme-default-padding-y gap-[50px] md:gap-[80px]">
       {/* LEFT */}
       <div className="flex flex-col w-full gap-[20px]">
         <div className="mb-[50px]">
@@ -44,7 +45,7 @@ export default function HomeContacts() {
 
               <h4 className="text-[18px] md:text-[24px] xl:text-[32px] font-bold text-left sm:text-right">
                 {item.url ? (
-                  <Link text={item.value} link={item.url} />
+                  <Link text={item.value} link={item.url} target="_blank" />
                 ) : (
                   <span>{item.value}</span>
                 )}

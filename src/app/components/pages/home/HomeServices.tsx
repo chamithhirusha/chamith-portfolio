@@ -62,7 +62,7 @@ export default function HomeServices() {
   ];
 
   return (
-    <div className="flex flex-col theme-default-padding-x theme-default-padding-y gap-[50px]">
+    <div id="home-services" className="flex flex-col theme-default-padding-x theme-default-padding-y gap-[50px]">
       {services.map((service, index) => {
         const Icon = service.icon;
 
