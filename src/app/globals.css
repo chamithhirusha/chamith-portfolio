@@ -182,24 +182,6 @@ body {
   animation: rotate 4s linear infinite;
 }
 
-@keyframes scroll {
-  from {
-    translate: 0;
-  }
-  to {
-    translate: -50%;
-  }
-}
-
-@keyframes rotate {
-  from {
-    rotate: 0deg;
-  }
-  to {
-    rotate: 360deg;
-  }
-}
-
 /* ========================================================================
      CURSOR
      ======================================================================== */
@@ -232,7 +214,10 @@ body {
   width: 160px;
   height: 160px;
   opacity: 0.85;
-  transition: width 0.25s ease, height 0.25s ease, opacity 0.25s ease;
+  transition:
+    width 0.25s ease,
+    height 0.25s ease,
+    opacity 0.25s ease;
 }
 
 .custom-cursor.cursor-hover {
@@ -342,19 +327,26 @@ body {
   animation: pulse-outline 1.2s ease-in-out infinite;
 }
 
-@keyframes pulse-outline {
-  0% {
-    transform: scale(1);
-    opacity: 1;
-  }
-  50% {
-    transform: scale(1.15);
-    opacity: 0.4;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
+/* ========================================================================
+     MENU
+     ======================================================================== */
+.menu-text {
+  color: var(--theme-inverted-foreground);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-text .star {
+  color: var(--theme-inverted-foreground-overlay);
+}
+
+.menu-text:hover .star {
+  color: var(--theme-background);
+  animation: rotate 1s ease-out;
+}
+
+.menu-text:hover {
+  color: var(--theme-background);
 }
 
 /* ========================================================================
@@ -371,4 +363,37 @@ body {
     rgba(0, 0, 0, 1) 30%,
     rgba(0, 0, 0, 0) 70%
   );
+}
+
+@keyframes pulse-outline {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes scroll {
+  from {
+    translate: 0;
+  }
+  to {
+    translate: -50%;
+  }
+}
+
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
 }

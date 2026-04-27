@@ -5,6 +5,7 @@ interface Props {
   link: string;
   type: "whatsapp" | "linkedin" | "facebook" | "github";
   className?: string;
+  varient?: "primary" | "secondary";
 }
 
 const iconMap = {
@@ -19,13 +20,14 @@ export default function SocialMediaIcon({
   link,
   type,
   className = "",
+  varient = "primary",
 }: Props) {
   const Icon = iconMap[type];
 
   return (
     <a href={link} target="_blank" rel="noopener noreferrer">
       <div
-        className={`inline-flex w-fit clickable aspect-square cursor-pointer items-center justify-center gap-2 rounded-full border-2 theme-border-foreground p-2 ${className}`}
+        className={`inline-flex w-fit clickable aspect-square cursor-pointer items-center justify-center gap-2 rounded-full border-2 ${varient === "primary" ? "theme-border-foreground theme-foreground" : "theme-border-background theme-background"} p-2 ${className}`}
       >
         <Icon className="size-8" />
         {text && <span>{text}</span>}
