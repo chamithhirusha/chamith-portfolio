@@ -10,7 +10,7 @@ interface Props {
 const Badge = (props: Props) => {
   return (
     <div
-      className={`flex flex-row gap-3 justify-center items-center px-5 py-2 h-fit rounded-full border-2 theme-border-secondary-light ${props.className || ""}`}
+      className={`flex flex-row gap-3 justify-center items-center px-5 py-2 h-fit rounded-full border-2 ${props.className || ""}`}
     >
       {props.showDot && (
         <div

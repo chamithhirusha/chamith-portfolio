@@ -23,6 +23,31 @@ export const MenuIcon = ({
   );
 };
 
+export const CrossIcon = ({
+  className = "size-6",
+  strokeWidth = 1,
+}: {
+  className?: string;
+  strokeWidth?: number;
+}) => {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 24 24"
+      strokeWidth={strokeWidth}
+      stroke="currentColor"
+      className={className}
+    >
+      <path
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        d="M6 18 18 6M6 6l12 12"
+      />
+    </svg>
+  );
+};
+
 export const ArrowDownLeftIcon = ({
   className = "size-6",
   strokeWidth = 1,
