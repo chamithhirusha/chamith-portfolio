@@ -45,6 +45,36 @@ const Header = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    const isMobile = () => window.matchMedia("(max-width: 768px)").matches;
+
+    let scrollY = 0;
+
+    if (menuOpen && isMobile()) {
+      scrollY = window.scrollY;
+
+      document.body.style.position = "fixed";
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = "100%";
+    } else {
+      const top = document.body.style.top;
+
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+
+      if (top) {
+        window.scrollTo(0, parseInt(top || "0") * -1);
+      }
+    }
+
+    return () => {
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+    };
+  }, [menuOpen]);
+
   return (
     <header>
       {/* TOP BAR */}
@@ -79,9 +109,7 @@ const Header = () => {
               }`}
             />
             <div>
-              <p className="font-bold text-md sm:text-lg">
-                Chamith Hirusha
-              </p>
+              <p className="font-bold text-md sm:text-lg">Chamith Hirusha</p>
               <p className="font-bold text-xs sm:text-sm uppercase theme-secondary">
                 Full stack engineer
               </p>
@@ -116,13 +144,13 @@ const Header = () => {
       <div
         className={`fixed
         w-full h-full top-0 left-0
-        md:w-auto md:h-auto md:top-5 md:right-18 md:left-auto
+        md:w-auto md:min-w-[450px] md:h-auto md:top-5 md:right-18 md:left-auto
         px-[20px] py-[40px] md:px-[40px] md:py-[60px]
         gap-[40px] md:gap-[60px]
         rounded-none md:rounded-[20px]
         theme-bg-foreground z-[100] flex flex-col
         origin-top-right md:origin-top-right
-        overflow-hidden
+        overflow-y-auto
         transition-all duration-500 ease-[cubic-bezier(0.22,1,0.36,1)]
         ${
           menuOpen
@@ -135,7 +163,7 @@ const Header = () => {
           <Badge
             label="Menu"
             textColor="theme-background"
-            className="theme-border-inverted-foreground-overlay"
+            className="theme-border-inverted-foreground-overlay uppercase"
           />
 
           <div
@@ -150,7 +178,7 @@ const Header = () => {
         </div>
 
         {/* MENU ITEMS */}
-        <div className="flex flex-col gap-[10px] md:gap-[40px]">
+        <div className="flex flex-col gap-[10px] md:gap-[20px]">
           {[
             { label: "Homepage", path: "/" },
             { label: "Resume", path: "/" },
@@ -165,8 +193,8 @@ const Header = () => {
               onClick={() => navigate(item.path)}
             >
               <div className="flex flex-row items-center gap-5">
-                <SpecialStarIcon className="star size-3 md:size-5" />
-                <h2 className="font-moho-condensed text-[48px] sm:text-[72px] md:text-[120px] font-bold uppercase">
+                <SpecialStarIcon className="star size-2 md:size-4" />
+                <h2 className="font-moho-condensed text-[48px] sm:text-[64px] md:text-[80px] font-bold uppercase">
                   {item.label}
                 </h2>
               </div>
@@ -179,18 +207,18 @@ const Header = () => {
           <Button
             text="Book a call"
             varient="secondary"
-            className="text-[18px] md:text-[24px] xl:text-[32px] uppercase py-[10px]! px-[30px]! gap-[5px] lg:gap-[8px]"
-            endIcon={<SolidCameraIcon className="size-8 lg:size-12" />}
+            className="text-[16px] md:text-[18px] xl:text-[24px] uppercase py-[10px]! px-[30px]! gap-[5px] lg:gap-[8px]"
+            endIcon={<SolidCameraIcon className="size-6 lg:size-8" />}
           />
 
-          <div className="flex justify-center items-center gap-[8px] md:gap-[20px]">
+          <div className="flex justify-center items-center gap-[5px] md:gap-[10px]">
             {SOCIAL_LINKS.map((item) => (
               <SocialMediaIcon
                 key={item.type}
                 type={item.type}
                 link={item.link}
                 varient="secondary"
-                className="scale-90 md:scale-100"
+                className="scale-60 md:scale-80"
               />
             ))}
           </div>
