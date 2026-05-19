@@ -6,7 +6,7 @@ export default function AboutTitle() {
         <h1 className="font-moho-condensed text-[100px] md:text-[180px] xl:text-[200px] uppercase">
           <div className="flex items-center h-[80px] md:h-[160px]">About</div>
         </h1>
-        <h2 className="text-[18px] md:text-[24px] xl:text-[28px] theme-secondary">
+        <h2 className="text-center md:text-start text-[18px] md:text-[24px] xl:text-[28px] theme-secondary">
           7+ years of experience in the field of digital design working with
           national and international clients.
         </h2>
