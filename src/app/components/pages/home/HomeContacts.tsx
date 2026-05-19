@@ -26,7 +26,10 @@ const contactData = [
 
 export default function HomeContacts() {
   return (
-    <div id="home-contacts" className="flex flex-col lg:flex-row theme-default-padding-x theme-default-padding-y gap-[50px] md:gap-[80px]">
+    <div
+      id="home-contacts"
+      className="flex flex-col lg:flex-row theme-default-padding-x theme-default-padding-y gap-[50px] md:gap-[80px]"
+    >
       {/* LEFT */}
       <div className="flex flex-col w-full gap-[20px]">
         <div className="mb-[50px]">
