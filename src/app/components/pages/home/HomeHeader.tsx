@@ -29,11 +29,14 @@ export default function HomeHeader() {
   }, []);
 
   return (
-    <div id="home-header" className="relative h-screen min-h-[700px] overflow-hidden theme-default-padding-x theme-default-padding-y">
+    <div
+      id="home-header"
+      className="relative h-screen min-h-[700px] overflow-hidden theme-default-padding-x theme-default-padding-y"
+    >
       {/* Right side image */}
       <div className="absolute bottom-40 sm:bottom-20 right-0 h-full">
         <Image
-          src="/images/background-image.png"
+          src="/images/background-image_1.jpg"
           alt="Background"
           width={1024}
           height={1536}
@@ -46,7 +49,7 @@ export default function HomeHeader() {
       {/* Content */}
       <div className="relative z-10 h-full flex flex-col justify-between">
         <div className="flex justify-end sm:justify-start items-end 2xl:items-center h-full">
-          <h1 className="font-moho-condensed text-[100px] md:text-[200px] xl:text-[250px] 2xl:text-[400px] uppercase">
+          <h1 className="font-moho-condensed text-[100px] md:text-[200px] xl:text-[250px] 2xl:text-[20vw] uppercase">
             Chamith
           </h1>
         </div>

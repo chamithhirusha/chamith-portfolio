@@ -181,11 +181,11 @@ const Header = () => {
         <div className="flex flex-col gap-[10px] md:gap-[20px]">
           {[
             { label: "Homepage", path: "/" },
-            { label: "Resume", path: "/" },
-            { label: "Projects", path: "/" },
-            { label: "Experience", path: "/" },
-            { label: "About", path: "/" },
-            { label: "Contacts", path: "/" },
+            { label: "Resume", path: "/resume" },
+            { label: "Projects", path: "/projects" },
+            { label: "Experience", path: "/experience" },
+            { label: "About", path: "/about" },
+            { label: "Contacts", path: "/contacts" },
           ].map((item) => (
             <div
               key={item.label}

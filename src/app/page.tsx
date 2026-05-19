@@ -8,7 +8,9 @@ import HomeServices from "./components/pages/home/HomeServices";
 import HomeContacts from "./components/pages/home/HomeContacts";
 
 export default function Home() {
-  const [showWarning, setShowWarning] = useState(process.env.NEXT_PUBLIC_DEMO_MODE === "true");
+  const [showWarning, setShowWarning] = useState(
+    process.env.NEXT_PUBLIC_DEMO_MODE === "true",
+  );
 
   return (
     <>

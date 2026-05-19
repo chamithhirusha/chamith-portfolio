@@ -31,25 +31,63 @@ body {
 }
 
 /* ========================================================================
-     LAYOUT UTILITIES
-     ======================================================================== */
+   LAYOUT UTILITIES
+   ======================================================================== */
+
+/* X AXIS */
 .theme-default-padding-x {
   padding-left: 25px;
   padding-right: 25px;
 }
+
+.theme-default-padding-xs {
+  padding-left: 25px;
+}
+
+.theme-default-padding-xe {
+  padding-right: 25px;
+}
+
 @media (min-width: 768px) {
   .theme-default-padding-x {
     padding-left: 100px;
     padding-right: 100px;
   }
+
+  .theme-default-padding-xs {
+    padding-left: 100px;
+  }
+
+  .theme-default-padding-xe {
+    padding-right: 100px;
+  }
 }
+
+/* Y AXIS */
 .theme-default-padding-y {
   padding-top: 25px;
   padding-bottom: 25px;
 }
+
+.theme-default-padding-ys {
+  padding-top: 25px;
+}
+
+.theme-default-padding-ye {
+  padding-bottom: 25px;
+}
+
 @media (min-width: 768px) {
   .theme-default-padding-y {
     padding-top: 100px;
+    padding-bottom: 100px;
+  }
+
+  .theme-default-padding-ys {
+    padding-top: 100px;
+  }
+
+  .theme-default-padding-ye {
     padding-bottom: 100px;
   }
 }

@@ -8,7 +8,10 @@ export default function HomeLatestProjects() {
 
   return (
     projects.length > 0 && (
-      <div id="home-latest-projects" className="flex flex-col gap-[50px] md:gap-[100px] theme-default-padding-x theme-default-padding-y">
+      <div
+        id="home-latest-projects"
+        className="flex flex-col gap-[50px] md:gap-[100px] theme-default-padding-x theme-default-padding-y"
+      >
         <div className="flex flex-col gap-[25px] md:gap-[50px]">
           {projects.map((_, i) => (
             <div

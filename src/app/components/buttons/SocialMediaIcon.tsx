@@ -1,4 +1,9 @@
-import { FacebookIcon, GithubIcon, LinkedinIcon, WhatsappIcon } from "../icons/Icons";
+import {
+  FacebookIcon,
+  GithubIcon,
+  LinkedinIcon,
+  WhatsappIcon,
+} from "../icons/Icons";
 
 interface Props {
   text?: string;
