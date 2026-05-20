@@ -9,7 +9,7 @@ export default function AboutBanner() {
         <h3 className="font-moho-condensed text-center tracking-wide leading-tight font-bold text-[50px] md:text-[110px] uppercase">
           Ready to work together?
         </h3>
-        <p className="text-[18px] md:text-[24px] text-center w-8/12 mb-[50px]">
+        <p className="text-[18px] md:text-[24px] text-center w-11/12 lg:w-8/12 mb-[50px]">
           I&apos;m currently available and excited to take on new projects.
           Let&apos;s connect and turn your ideas into reality.
         </p>
