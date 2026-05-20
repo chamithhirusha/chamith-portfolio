@@ -1,0 +1,94 @@
+import Badge from "../../badges/Badge";
+
+export default function AboutExperience() {
+  const experience = [
+    {
+      title: "Frontend Engineer",
+      company: "Meta",
+      duration: {
+        start: "2025",
+        end: "Present",
+        isCurrent: true,
+      },
+    },
+    {
+      title: "UI/UX Designer",
+      company: "Google",
+      duration: {
+        start: "2023",
+        end: "2025",
+        isCurrent: false,
+      },
+    },
+    {
+      title: "Full Stack Developer",
+      company: "Amazon",
+      duration: {
+        start: "2020",
+        end: "2023",
+        isCurrent: false,
+      },
+    },
+    {
+      title: "Intern",
+      company: "Microsoft",
+      duration: {
+        start: "2019",
+        end: "2020",
+        isCurrent: false,
+      },
+    },
+  ];
+
+  return (
+    <>
+      <div className="theme-default-padding-x">
+        <hr className="theme-border-secondary" />
+      </div>
+
+      <div className="theme-default-padding-x theme-default-padding-y">
+        <div className="flex flex-col xl:flex-row justify-between gap-[60px]">
+          <div className="xl:sticky xl:top-[120px] h-fit">
+            <Badge
+              label="Experience"
+              textColor="theme-foreground"
+              className="theme-border-inverted-foreground-overlay uppercase"
+            />
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[40px] gap-y-[60px] xl:w-9/12">
+            {experience.map((experience, index) => {
+              return (
+                <div
+                  key={index}
+                  className="flex flex-col items-center md:items-start"
+                >
+                  <div className="flex gap-[10px] mb-[10px] theme-secondary">
+                    <p>{experience.duration.start}</p> <p> - </p>{" "}
+                    {experience.duration.isCurrent ? (
+                      <p className="theme-foreground font-bold">Present</p>
+                    ) : (
+                      <p className="theme-secondary">
+                        {experience.duration.end}
+                      </p>
+                    )}
+                  </div>
+
+                  <h3 className="font-bold text-[18px] md:text-[24px] capitalize">
+                    {experience.title}
+                  </h3>
+
+                  <div className="flex gap-[10px] mt-[10px] max-w-[500px]">
+                    <p className="text-sm md:text-base theme-secondary leading-relaxed">
+                      at {experience.company}
+                    </p>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}
