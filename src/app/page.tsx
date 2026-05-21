@@ -47,13 +47,10 @@ export default function Home() {
 
       {/* Page Content */}
       <HomeHeader />
-
       <TextSlider text="Latest Projects" />
       <HomeLatestProjects />
-
       <TextSlider text="Services" reverse />
       <HomeServices />
-
       <TextSlider text="Contacts" />
       <HomeContacts />
     </>

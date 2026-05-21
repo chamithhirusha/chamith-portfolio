@@ -1,3 +1,5 @@
+"use client";
+
 import AboutBanner from "../components/pages/about/AboutBanner";
 import AboutCertifications from "../components/pages/about/AboutCertifications";
 import AboutExperience from "../components/pages/about/AboutExperience";
@@ -12,21 +14,13 @@ export default function About() {
   return (
     <>
       <AboutTitle />
-
       <AboutIntroduction />
-
-      <TextSlider text="Resume / CV" />
-
+      <TextSlider text="Resume / CV" id="resume" />
       <AboutExpertiseArea />
-
       <AboutExperience />
-
       <AboutCertifications />
-
       <AboutSkills />
-
       <AboutRecommendations />
-
       <AboutBanner />
     </>
   );

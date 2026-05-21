@@ -1,8 +1,9 @@
 import Link from "../buttons/Link";
 import SocialMediaIcon from "../buttons/SocialMediaIcon";
-import { PROFILE } from "@/app/config.json";
+import config from "@/app/config.json";
 
 const Footer = () => {
+  const PROFILE = config.PROFILE;
   const SOCIAL_LINKS = [
     { type: "whatsapp", link: PROFILE.WHATSAPP.URL },
     { type: "linkedin", link: PROFILE.LINKEDIN.URL },

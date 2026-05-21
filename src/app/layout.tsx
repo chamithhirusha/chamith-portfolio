@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import "./globals.css";
-import { Consolas, MohoCondensed } from "./fonts/fonts";
-import Header from "./components/header/Header";
-import ScrollProvider from "./components/scroll-provider/ScrollProvider";
 import Cursor from "./components/cursor/Cursor";
 import Footer from "./components/footer/Footer";
+import Header from "./components/header/Header";
+import ScrollProvider from "./components/scroll-provider/ScrollProvider";
+import { Consolas, MohoCondensed } from "./fonts/fonts";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Chamith Hirusha — Portfolio",

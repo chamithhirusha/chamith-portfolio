@@ -4,27 +4,28 @@ import { SolidCameraIcon } from "../../icons/Icons";
 import Checkbox from "../../inputs/Checkbox";
 import TextArea from "../../inputs/TextArea";
 import TextField from "../../inputs/TextField";
-import { PROFILE } from "@/app/config.json";
-
-const contactData = [
-  {
-    label: "e-mail",
-    value: PROFILE.EMAIL.TEXT,
-    url: PROFILE.EMAIL.URL,
-  },
-  {
-    label: "Phone",
-    value: PROFILE.PHONE.TEXT,
-    url: PROFILE.PHONE.URL,
-  },
-  {
-    label: "Location",
-    value: PROFILE.LOCATION.TEXT,
-    url: PROFILE.LOCATION.URL,
-  },
-];
+import config from "@/app/config.json";
 
 export default function HomeContacts() {
+  const PROFILE = config.PROFILE;
+  const contactData = [
+    {
+      label: "e-mail",
+      value: PROFILE.EMAIL.TEXT,
+      url: PROFILE.EMAIL.URL,
+    },
+    {
+      label: "Phone",
+      value: PROFILE.PHONE.TEXT,
+      url: PROFILE.PHONE.URL,
+    },
+    {
+      label: "Location",
+      value: PROFILE.LOCATION.TEXT,
+      url: PROFILE.LOCATION.URL,
+    },
+  ];
+
   return (
     <div
       id="home-contacts"

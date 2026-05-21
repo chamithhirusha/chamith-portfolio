@@ -1,6 +1,7 @@
+import config from "@/app/config.json";
+import Image from "next/image";
 import Badge from "../../badges/Badge";
 import CircleButton from "../../buttons/CircleButton";
-import Image from "next/image";
 
 export default function AboutRecommendations() {
   const recommendations = [
@@ -94,7 +95,17 @@ export default function AboutRecommendations() {
             })}
 
             <div className="flex justify-end items-center lg:justify-end lg:items-end">
-              <CircleButton text="Recommend me" arrowDirection="up-right" />
+              <CircleButton
+                onClick={() =>
+                  window.open(
+                    config.PROFILE.LINKEDIN.URL + "details/recommendations/",
+                    "_blank",
+                    "noopener,noreferrer",
+                  )
+                }
+                text="Recommend me"
+                arrowDirection="up-right"
+              />
             </div>
           </div>
         </div>
