@@ -35,74 +35,97 @@
   },
   "PROJECTS": [
     {
-      "TITLE": "Project 1",
-      "DESCRIPTION": "Description of Project 1",
-      "IMAGE": "https://images.unsplash.com/photo-1700667282848-994df515c0d7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "TITLE": "Breakdown Assistant",
+      "DESCRIPTION": "A mobile application designed to provide assistance to drivers in the event of a vehicle breakdown. The app offers features such as real-time location tracking, emergency contact notifications, and a directory of nearby repair shops and towing services.",
+      "YEAR": "2026",
+      "CATEGORY": "FRONTEND",
+      "IMAGES": {
+        "THUMBNAIL": "images/projects/vehicle-breakdown-assistance-app/img3.png",
+        "IMAGE_FILES": [
+          "images/projects/vehicle-breakdown-assistance-app/img1.png",
+          "images/projects/vehicle-breakdown-assistance-app/img2.png",
+          "images/projects/vehicle-breakdown-assistance-app/img3.png",
+          "images/projects/vehicle-breakdown-assistance-app/img4.png",
+          "images/projects/vehicle-breakdown-assistance-app/img5.png"
+        ]
+      },
       "TAGS": ["React", "Next.js"],
       "REDIRECT_URL": "https://example.com/project1"
     },
     {
-      "TITLE": "Project 2",
-      "DESCRIPTION": "Description of Project 2",
-      "IMAGE": "https://images.unsplash.com/photo-1548949974-54c5fc17dd45?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "TAGS": ["Node.js", "Express"],
-      "REDIRECT_URL": "https://example.com/project2"
+      "TITLE": "S.A.M.",
+      "DESCRIPTION": "An art management system designed to streamline the organization and curation of art collections. The system provides features such as inventory management, exhibition planning, and artist collaboration tools.",
+      "YEAR": "2024",
+      "CATEGORY": "FULL - STACK",
+      "IMAGES": {
+        "THUMBNAIL": "images/projects/sam-app/img2.png",
+        "IMAGE_FILES": [
+          "images/projects/sam-app/img1.png",
+          "images/projects/sam-app/img2.png",
+          "images/projects/sam-app/img3.png"
+        ]
+      },
+      "TAGS": ["React", "Next.js"],
+      "REDIRECT_URL": "https://example.com/project1"
     },
     {
-      "TITLE": "Project 3",
-      "DESCRIPTION": "Description of Project 3",
-      "IMAGE": "https://images.unsplash.com/photo-1691397119215-5e7bb8a10118?q=80&w=2120&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by=1&ixid=M3wxMjA3fDB8fHx8fA%3D%3D",
-      "TAGS": ["Python", "Django"],
-      "REDIRECT_URL": "https://example.com/project3"
+      "TITLE": "Digital Banking",
+      "DESCRIPTION": "A digital banking application designed to provide a seamless online banking experience. The app features a user-friendly interface, secure payment processing, and a wide range of financial services.",
+      "YEAR": "2024",
+      "CATEGORY": "FRONTEND",
+      "IMAGES": {
+        "THUMBNAIL": "images/projects/digital-banking-app/img3.png",
+        "IMAGE_FILES": [
+          "images/projects/digital-banking-app/img1.png",
+          "images/projects/digital-banking-app/img2.png",
+          "images/projects/digital-banking-app/img3.png",
+          "images/projects/digital-banking-app/img4.png",
+          "images/projects/digital-banking-app/img5.png",
+          "images/projects/digital-banking-app/img6.png"
+        ]
+      },
+      "TAGS": ["React", "Next.js"],
+      "REDIRECT_URL": "https://example.com/project1"
     },
     {
-      "TITLE": "Project 4",
-      "DESCRIPTION": "Description of Project 4",
-      "IMAGE": "https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?q=80&w=1676&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "TAGS": ["JavaScript", "Vue.js"],
-      "REDIRECT_URL": "https://example.com/project4"
+      "TITLE": "E-commerce Platform",
+      "DESCRIPTION": "An e-commerce platform dedicated to the sale of vehicle spare parts. The platform offers a wide selection of products, secure payment options, and efficient delivery services to cater to the needs of automotive enthusiasts and repair shops.",
+      "YEAR": "2023",
+      "CATEGORY": "FRONTEND",
+      "IMAGES": {
+        "THUMBNAIL": "images/projects/vehicle-parts-ecommerce-app/img1.png",
+        "IMAGE_FILES": [
+          "images/projects/vehicle-parts-ecommerce-app/img1.png",
+          "images/projects/vehicle-parts-ecommerce-app/img2.png",
+          "images/projects/vehicle-parts-ecommerce-app/img3.png",
+          "images/projects/vehicle-parts-ecommerce-app/img4.png",
+          "images/projects/vehicle-parts-ecommerce-app/img5.png",
+          "images/projects/vehicle-parts-ecommerce-app/img6.png",
+          "images/projects/vehicle-parts-ecommerce-app/img7.png",
+          "images/projects/vehicle-parts-ecommerce-app/img8.png"
+        ]
+      },
+      "TAGS": ["React", "Next.js"],
+      "REDIRECT_URL": "https://example.com/project1"
     },
     {
-      "TITLE": "Project 5",
-      "DESCRIPTION": "Description of Project 5",
-      "IMAGE": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "TAGS": ["Java", "Spring Boot"],
-      "REDIRECT_URL": "https://example.com/project5"
-    },
-    {
-      "TITLE": "Project 6",
-      "DESCRIPTION": "Description of Project 6",
-      "IMAGE": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "TAGS": ["C#", ".NET"],
-      "REDIRECT_URL": "https://example.com/project6"
-    },
-    {
-      "TITLE": "Project 7",
-      "DESCRIPTION": "Description of Project 7",
-      "IMAGE": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "TAGS": ["Go", "Gin"],
-      "REDIRECT_URL": "https://example.com/project7"
-    },
-    {
-      "TITLE": "Project 8",
-      "DESCRIPTION": "Description of Project 8",
-      "IMAGE": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "TAGS": ["Ruby", "Rails"],
-      "REDIRECT_URL": "https://example.com/project8"
-    },
-    {
-      "TITLE": "Project 9",
-      "DESCRIPTION": "Description of Project 9",
-      "IMAGE": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "TAGS": ["PHP", "Laravel"],
-      "REDIRECT_URL": "https://example.com/project9"
-    },
-    {
-      "TITLE": "Project 10",
-      "DESCRIPTION": "Description of Project 10",
-      "IMAGE": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      "TAGS": ["Swift", "iOS"],
-      "REDIRECT_URL": "https://example.com/project10"
+      "TITLE": "CodeLK Website",
+      "DESCRIPTION": "A modern website for CodeLK, showcasing their services and portfolio. The site features a responsive design, intuitive navigation, and a clean aesthetic to provide an excellent user experience.",
+      "YEAR": "2023",
+      "CATEGORY": "UI / UX DESIGN",
+      "IMAGES": {
+        "THUMBNAIL": "images/projects/codelk-website/img1.png",
+        "IMAGE_FILES": [
+          "images/projects/codelk-website/img1.png",
+          "images/projects/codelk-website/img2.png",
+          "images/projects/codelk-website/img3.png",
+          "images/projects/codelk-website/img4.png",
+          "images/projects/codelk-website/img5.png",
+          "images/projects/codelk-website/img6.png"
+        ]
+      },
+      "TAGS": ["React", "Next.js"],
+      "REDIRECT_URL": "https://example.com/project1"
     }
   ]
 }

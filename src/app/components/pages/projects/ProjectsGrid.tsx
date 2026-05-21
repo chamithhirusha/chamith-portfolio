@@ -1,16 +1,34 @@
+import { useMemo } from "react";
 import { ArrowDownLeftIcon } from "../../icons/Icons";
 import Badge from "../../badges/Badge";
 import config from "@/app/config.json";
 
-export default function ProjectsGrid() {
-  const projects = config.PROJECTS || [];
+interface Props {
+  selectedRole: string;
+  selectedYear: string;
+}
 
-  if (projects.length === 0) return null;
+export default function ProjectsGrid({ selectedRole, selectedYear }: Props) {
+  const filteredProjects = useMemo(() => {
+    const projects = config.PROJECTS || [];
+
+    return projects.filter((project) => {
+      const roleMatch =
+        selectedRole === "All Categories" || project.CATEGORY === selectedRole;
+
+      const yearMatch =
+        selectedYear === "All Years" || String(project.YEAR) === selectedYear;
+
+      return roleMatch && yearMatch;
+    });
+  }, [selectedRole, selectedYear]);
+
+  if (filteredProjects.length === 0) return null;
 
   return (
     <div className="theme-default-padding-x theme-default-padding-ye">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-[25px] md:gap-[50px]">
-        {projects.map((project, i) => (
+        {filteredProjects.map((project, i) => (
           <div
             key={i}
             className="group clickable relative overflow-hidden rounded-[20px] w-full h-[350px] md:h-[450px] lg:h-[500px]"
@@ -23,7 +41,7 @@ export default function ProjectsGrid() {
                 transition-all duration-700 ease-out
                 group-hover:grayscale-0 group-hover:brightness-90 group-hover:scale-110
               "
-              style={{ backgroundImage: `url(${project.IMAGE})` }}
+              style={{ backgroundImage: `url(${project.IMAGES.THUMBNAIL})` }}
             />
 
             {/* Gradient Overlay */}
