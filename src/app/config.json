@@ -33,7 +33,6 @@
       "URL": "https://www.google.com/maps/place/Colombo,+Sri+Lanka"
     }
   },
-
   "PROJECTS": [
     {
       "TITLE": "Project 1",
@@ -62,6 +61,48 @@
       "IMAGE": "https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?q=80&w=1676&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
       "TAGS": ["JavaScript", "Vue.js"],
       "REDIRECT_URL": "https://example.com/project4"
+    },
+    {
+      "TITLE": "Project 5",
+      "DESCRIPTION": "Description of Project 5",
+      "IMAGE": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "TAGS": ["Java", "Spring Boot"],
+      "REDIRECT_URL": "https://example.com/project5"
+    },
+    {
+      "TITLE": "Project 6",
+      "DESCRIPTION": "Description of Project 6",
+      "IMAGE": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "TAGS": ["C#", ".NET"],
+      "REDIRECT_URL": "https://example.com/project6"
+    },
+    {
+      "TITLE": "Project 7",
+      "DESCRIPTION": "Description of Project 7",
+      "IMAGE": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "TAGS": ["Go", "Gin"],
+      "REDIRECT_URL": "https://example.com/project7"
+    },
+    {
+      "TITLE": "Project 8",
+      "DESCRIPTION": "Description of Project 8",
+      "IMAGE": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "TAGS": ["Ruby", "Rails"],
+      "REDIRECT_URL": "https://example.com/project8"
+    },
+    {
+      "TITLE": "Project 9",
+      "DESCRIPTION": "Description of Project 9",
+      "IMAGE": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "TAGS": ["PHP", "Laravel"],
+      "REDIRECT_URL": "https://example.com/project9"
+    },
+    {
+      "TITLE": "Project 10",
+      "DESCRIPTION": "Description of Project 10",
+      "IMAGE": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "TAGS": ["Swift", "iOS"],
+      "REDIRECT_URL": "https://example.com/project10"
     }
   ]
 }

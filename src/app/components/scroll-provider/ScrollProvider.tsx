@@ -3,6 +3,12 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
 
+let lenisInstance: Lenis | null = null;
+
+export function getLenis() {
+  return lenisInstance;
+}
+
 export default function ScrollProvider({
   children,
 }: {
@@ -14,6 +20,8 @@ export default function ScrollProvider({
       smoothWheel: true,
       wheelMultiplier: 0.9,
     });
+
+    lenisInstance = lenis;
 
     let rafId: number;
 
@@ -27,6 +35,7 @@ export default function ScrollProvider({
     return () => {
       cancelAnimationFrame(rafId);
       lenis.destroy();
+      lenisInstance = null;
     };
   }, []);
 

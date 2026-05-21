@@ -46,7 +46,10 @@ export default function AboutExperience() {
         <hr className="theme-border-secondary" />
       </div>
 
-      <div className="theme-default-padding-x theme-default-padding-y">
+      <div
+        id="experience"
+        className="theme-default-padding-x theme-default-padding-y"
+      >
         <div className="flex flex-col xl:flex-row justify-between gap-[60px]">
           <div className="xl:sticky xl:top-[120px] h-fit">
             <Badge

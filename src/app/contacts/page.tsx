@@ -1,3 +1,5 @@
+"use client";
+
 import ContactLocation from "../components/pages/contacts/ContactLocation";
 import ContactTitle from "../components/pages/contacts/ContactTitle";
 import HomeContacts from "../components/pages/home/HomeContacts";
@@ -7,11 +9,8 @@ export default function Contacts() {
   return (
     <>
       <ContactTitle />
-
       <HomeContacts />
-
       <TextSlider text="Location" />
-
       <ContactLocation />
     </>
   );

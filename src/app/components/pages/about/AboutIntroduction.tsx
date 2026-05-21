@@ -1,7 +1,10 @@
 import Image from "next/image";
 import CircleButton from "../../buttons/CircleButton";
+import { useRouter } from "next/navigation";
 
 export default function AboutIntroduction() {
+  const { push } = useRouter();
+
   return (
     <div className="theme-default-padding-x theme-default-padding-ye">
       <div className="flex justify-center md:justify-end">
@@ -55,7 +58,11 @@ export default function AboutIntroduction() {
           </div>
 
           <div className="flex justify-center md:justify-end pt-[50px]">
-            <CircleButton text="All Works" arrowDirection="up-right" />
+            <CircleButton
+              onClick={() => push("/projects")}
+              text="All Works"
+              arrowDirection="up-right"
+            />
           </div>
         </div>
 

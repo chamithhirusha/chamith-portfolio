@@ -1,10 +1,12 @@
 import Badge from "@/app/components/badges/Badge";
 import CircleButton from "@/app/components/buttons/CircleButton";
 import { ArrowDownLeftIcon } from "@/app/components/icons/Icons";
-import { PROJECTS } from "@/app/config.json";
+import config from "@/app/config.json";
+import { useRouter } from "next/navigation";
 
 export default function HomeLatestProjects() {
-  const projects = PROJECTS;
+  const { push } = useRouter();
+  const projects = config.PROJECTS;
 
   return (
     projects.length > 0 && (
@@ -13,7 +15,7 @@ export default function HomeLatestProjects() {
         className="flex flex-col gap-[50px] md:gap-[100px] theme-default-padding-x theme-default-padding-y"
       >
         <div className="flex flex-col gap-[25px] md:gap-[50px]">
-          {projects.map((_, i) => (
+          {projects.slice(0, 4).map((_, i) => (
             <div
               key={i}
               className={`group clickable relative overflow-hidden rounded-[20px] w-full md:w-7/8 lg:w-5/8 h-[350px] md:h-[450px] lg:h-[600px] xl:h-[700px] ${
@@ -72,7 +74,11 @@ export default function HomeLatestProjects() {
         </div>
 
         <div className="flex justify-center">
-          <CircleButton text="All Works" arrowDirection="up-right" />
+          <CircleButton
+            onClick={() => push("/projects")}
+            text="All Works"
+            arrowDirection="up-right"
+          />
         </div>
       </div>
     )

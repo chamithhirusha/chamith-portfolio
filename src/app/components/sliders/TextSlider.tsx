@@ -4,11 +4,15 @@ interface Props {
   text: string;
   noIcon?: boolean;
   reverse?: boolean;
+  id?: string;
 }
 
-const TextSlider = ({ text, noIcon, reverse }: Props) => {
+const TextSlider = ({ text, noIcon, reverse, id }: Props) => {
   return (
-    <div className="slider gap-[25px] md:gap-[50px] theme-default-padding-y">
+    <div
+      id={id}
+      className="slider gap-[25px] md:gap-[50px] theme-default-padding-y"
+    >
       <div
         className={`slider-track gap-[25px] md:gap-[50px] ${
           reverse ? "slider-reverse" : ""

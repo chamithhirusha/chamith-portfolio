@@ -12,10 +12,11 @@ import {
 import { useRouter } from "next/navigation";
 import Button from "../buttons/Button";
 import SocialMediaIcon from "../buttons/SocialMediaIcon";
-import { PROFILE } from "@/app/config.json";
+import config from "@/app/config.json";
 
 const Header = () => {
   const { push } = useRouter();
+  const PROFILE = config.PROFILE;
 
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
@@ -181,9 +182,9 @@ const Header = () => {
         <div className="flex flex-col gap-[10px] md:gap-[20px]">
           {[
             { label: "Homepage", path: "/" },
-            { label: "Resume", path: "/resume" },
+            { label: "Resume", path: "/about#resume" },
             { label: "Projects", path: "/projects" },
-            { label: "Experience", path: "/experience" },
+            { label: "Experience", path: "/about#experience" },
             { label: "About", path: "/about" },
             { label: "Contacts", path: "/contacts" },
           ].map((item) => (
