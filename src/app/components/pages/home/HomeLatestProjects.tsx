@@ -59,6 +59,7 @@ export default function HomeLatestProjects() {
             key={i}
             onMouseEnter={() => startRotation(i)}
             onMouseLeave={stopRotation}
+            onClick={() => push(`/projects/${project.ID}`)}
             className={`group clickable relative overflow-hidden rounded-[20px] w-full md:w-7/8 lg:w-5/8 h-[350px] md:h-[450px] lg:h-[600px] xl:h-[700px] ${
               i % 2 === 0 ? "self-start" : "self-end"
             }`}
