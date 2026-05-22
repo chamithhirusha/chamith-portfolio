@@ -109,7 +109,7 @@ export default function HomeLatestProjects() {
 
               {/* TITLE */}
               <div className="flex gap-5 items-end justify-between">
-                <h3 className="font-moho-condensed font-bold text-[48px] md:text-[64px] lg:text-[96px]">
+                <h3 className="font-moho-condensed font-bold leading-tight text-[48px] md:text-[64px] lg:text-[96px]">
                   {project.TITLE}
                 </h3>
 

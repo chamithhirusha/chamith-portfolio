@@ -35,6 +35,7 @@
   },
   "PROJECTS": [
     {
+      "ID": "0",
       "TITLE": "Breakdown Assistant",
       "DESCRIPTION": "A mobile application designed to provide assistance to drivers in the event of a vehicle breakdown. The app offers features such as real-time location tracking, emergency contact notifications, and a directory of nearby repair shops and towing services.",
       "YEAR": "2026",
@@ -49,10 +50,53 @@
           "images/projects/vehicle-breakdown-assistance-app/img5.png"
         ]
       },
+      "DETAILS": {
+        "WORKED_AREAS": ["UI/UX Design", "Frontend Development"],
+        "ROLE": "Lead Designer and Frontend Developer",
+        "DURATION": "6 months",
+        "TECHNOLOGIES": ["React Native", "Expo", "Firebase"],
+        "FEATURES": [
+          "Real-time Location Tracking",
+          "Emergency Contact Notifications",
+          "Directory of Nearby Repair Shops and Towing Services",
+          "User-friendly Interface",
+          "Offline Functionality"
+        ],
+        "COLORS": [
+          "#F3F3F3",
+          "#000000",
+          "#FFFFFF",
+          "#7F7F7F",
+          "#ABABAB",
+          "#FF0000",
+          "#000000",
+          "#1FBD78",
+          "#BD1F41",
+          "#FE9900"
+        ]
+      },
+      "HIGHLIGHTS": [
+        {
+          "TITLE": "Real-time Location Tracking",
+          "DESCRIPTION": "The app utilizes GPS technology to provide real-time location tracking, allowing users to share their location with emergency contacts and service providers for quick assistance.",
+          "YEAR": "2026"
+        },
+        {
+          "TITLE": "Emergency Contact Notifications",
+          "DESCRIPTION": "In the event of a breakdown, the app automatically sends notifications to pre-selected emergency contacts, providing them with the user's location and details of the situation.",
+          "YEAR": "2026"
+        },
+        {
+          "TITLE": "Directory of Nearby Repair Shops and Towing Services",
+          "DESCRIPTION": "The app includes a comprehensive directory of nearby repair shops and towing services, allowing users to quickly find and contact assistance in their area.",
+          "YEAR": "2026"
+        }
+      ],
       "TAGS": ["React", "Next.js"],
       "REDIRECT_URL": "https://example.com/project1"
     },
     {
+      "ID": "1",
       "TITLE": "S.A.M.",
       "DESCRIPTION": "An art management system designed to streamline the organization and curation of art collections. The system provides features such as inventory management, exhibition planning, and artist collaboration tools.",
       "YEAR": "2024",
@@ -65,10 +109,53 @@
           "images/projects/sam-app/img3.png"
         ]
       },
+      "DETAILS": {
+        "WORKED_AREAS": [
+          "UI/UX Design",
+          "Frontend Development",
+          "Backend Development"
+        ],
+        "ROLE": "Full Stack Developer",
+        "DURATION": "8 months",
+        "TECHNOLOGIES": ["React", "Node.js", "Express", "MongoDB"],
+        "FEATURES": [
+          "Inventory Management",
+          "Exhibition Planning",
+          "Artist Collaboration Tools",
+          "User-friendly Interface",
+          "Secure Authentication"
+        ],
+        "COLORS": [
+          "#8947F9",
+          "#FFFFFF",
+          "#BD1F41",
+          "#EADFFC",
+          "#000000",
+          "#FE9900"
+        ]
+      },
+      "HIGHLIGHTS": [
+        {
+          "TITLE": "Inventory Management",
+          "DESCRIPTION": "The system provides robust inventory management features, allowing users to catalog and track their art collections with ease.",
+          "YEAR": "2024"
+        },
+        {
+          "TITLE": "Exhibition Planning",
+          "DESCRIPTION": "S.A.M. includes tools for planning and organizing exhibitions, enabling users to create detailed exhibition layouts and schedules.",
+          "YEAR": "2024"
+        },
+        {
+          "TITLE": "Artist Collaboration Tools",
+          "DESCRIPTION": "The platform facilitates collaboration between artists, curators, and collectors, providing tools for communication and project management.",
+          "YEAR": "2024"
+        }
+      ],
       "TAGS": ["React", "Next.js"],
       "REDIRECT_URL": "https://example.com/project1"
     },
     {
+      "ID": "2",
       "TITLE": "Digital Banking",
       "DESCRIPTION": "A digital banking application designed to provide a seamless online banking experience. The app features a user-friendly interface, secure payment processing, and a wide range of financial services.",
       "YEAR": "2024",
@@ -84,10 +171,42 @@
           "images/projects/digital-banking-app/img6.png"
         ]
       },
+      "DETAILS": {
+        "WORKED_AREAS": ["UI/UX Design", "Frontend Development"],
+        "ROLE": "Lead Designer and Frontend Developer",
+        "DURATION": "6 months",
+        "TECHNOLOGIES": ["React Native", "Expo", "Firebase"],
+        "FEATURES": [
+          "User-friendly Interface",
+          "Secure Payment Processing",
+          "Wide Range of Financial Services",
+          "Real-time Transaction Tracking",
+          "Personalized Financial Insights"
+        ],
+        "COLORS": ["#962742", "#000000", "#FFFFFF", "#6A6A6A", "#1F1F1F"]
+      },
+      "HIGHLIGHTS": [
+        {
+          "TITLE": "User-friendly Interface",
+          "DESCRIPTION": "The app features a clean and intuitive interface that makes it easy for users to navigate and access all the necessary functions.",
+          "YEAR": "2024"
+        },
+        {
+          "TITLE": "Secure Payment Processing",
+          "DESCRIPTION": "The app ensures secure and reliable payment processing, protecting user financial information and providing a seamless checkout experience.",
+          "YEAR": "2024"
+        },
+        {
+          "TITLE": "Wide Range of Financial Services",
+          "DESCRIPTION": "The app offers a comprehensive suite of financial services, including account management, transaction history, and personalized financial insights.",
+          "YEAR": "2024"
+        }
+      ],
       "TAGS": ["React", "Next.js"],
       "REDIRECT_URL": "https://example.com/project1"
     },
     {
+      "ID": "3",
       "TITLE": "E-commerce Platform",
       "DESCRIPTION": "An e-commerce platform dedicated to the sale of vehicle spare parts. The platform offers a wide selection of products, secure payment options, and efficient delivery services to cater to the needs of automotive enthusiasts and repair shops.",
       "YEAR": "2023",
@@ -105,16 +224,55 @@
           "images/projects/vehicle-parts-ecommerce-app/img8.png"
         ]
       },
+      "DETAILS": {
+        "WORKED_AREAS": ["UI/UX Design", "Frontend Development"],
+        "ROLE": "Lead Designer and Frontend Developer",
+        "DURATION": "6 months",
+        "TECHNOLOGIES": ["React Native", "Expo", "Firebase"],
+        "FEATURES": [
+          "User-friendly Interface",
+          "Secure Payment Processing",
+          "Wide Range of Financial Services",
+          "Real-time Transaction Tracking",
+          "Personalized Financial Insights"
+        ],
+        "COLORS": [
+          "#DB4444",
+          "#FFFFFF",
+          "#000000",
+          "#FFAD33",
+          "#33FF3B",
+          "#F2F2F2"
+        ]
+      },
+      "HIGHLIGHTS": [
+        {
+          "TITLE": "User-friendly Interface",
+          "DESCRIPTION": "The app features a clean and intuitive interface that makes it easy for users to navigate and access all the necessary functions.",
+          "YEAR": "2024"
+        },
+        {
+          "TITLE": "Secure Payment Processing",
+          "DESCRIPTION": "The app ensures secure and reliable payment processing, protecting user financial information and providing a seamless checkout experience.",
+          "YEAR": "2024"
+        },
+        {
+          "TITLE": "Wide Range of Financial Services",
+          "DESCRIPTION": "The app offers a comprehensive suite of financial services, including account management, transaction history, and personalized financial insights.",
+          "YEAR": "2024"
+        }
+      ],
       "TAGS": ["React", "Next.js"],
       "REDIRECT_URL": "https://example.com/project1"
     },
     {
+      "ID": "4",
       "TITLE": "CodeLK Website",
       "DESCRIPTION": "A modern website for CodeLK, showcasing their services and portfolio. The site features a responsive design, intuitive navigation, and a clean aesthetic to provide an excellent user experience.",
       "YEAR": "2023",
       "CATEGORY": "UI / UX DESIGN",
       "IMAGES": {
-        "THUMBNAIL": "images/projects/codelk-website/img1.png",
+        "THUMBNAIL": "images/projects/codelk-website/img3.png",
         "IMAGE_FILES": [
           "images/projects/codelk-website/img1.png",
           "images/projects/codelk-website/img2.png",
@@ -124,7 +282,36 @@
           "images/projects/codelk-website/img6.png"
         ]
       },
+      "DETAILS": {
+        "WORKED_AREAS": ["UI/UX Design", "Frontend Development"],
+        "ROLE": "Lead Designer and Frontend Developer",
+        "DURATION": "6 months",
+        "TECHNOLOGIES": ["React", "Next.js"],
+        "FEATURES": [
+          "Responsive Design",
+          "Intuitive Navigation",
+          "Clean Aesthetic"
+        ],
+        "COLORS": ["#0D6EFD", "#FFFFFF", "#000000", "#CDCDCD", "#000C1D"]
+      },
       "TAGS": ["React", "Next.js"],
+      "HIGHLIGHTS": [
+        {
+          "TITLE": "Responsive Design",
+          "DESCRIPTION": "The website features a responsive design that adapts to different screen sizes, ensuring a consistent user experience across all devices.",
+          "YEAR": "2024"
+        },
+        {
+          "TITLE": "Intuitive Navigation",
+          "DESCRIPTION": "The site offers intuitive navigation that makes it easy for users to find the information they need quickly and efficiently.",
+          "YEAR": "2024"
+        },
+        {
+          "TITLE": "Clean Aesthetic",
+          "DESCRIPTION": "The website boasts a clean and modern aesthetic that enhances the overall user experience and showcases the services effectively.",
+          "YEAR": "2024"
+        }
+      ],
       "REDIRECT_URL": "https://example.com/project1"
     }
   ]
