@@ -1,0 +1,46 @@
+{
+  "contact": {
+    "email": {
+      "label": "Email",
+      "value": "chamithhirusha99@gmail.com",
+      "href": "mailto:chamithhirusha99@gmail.com"
+    },
+    "phone": {
+      "label": "Phone",
+      "value": "+94 77 843 8869",
+      "href": "tel:+94778438869"
+    },
+    "whatsapp": {
+      "label": "WhatsApp",
+      "value": "Chat on WhatsApp",
+      "href": "https://wa.me/94787547957"
+    }
+  },
+  "social": {
+    "facebook": {
+      "label": "Facebook",
+      "value": "Facebook",
+      "href": "https://www.facebook.com/chamith.hirusha.9"
+    },
+    "linkedin": {
+      "label": "LinkedIn",
+      "value": "LinkedIn",
+      "href": "https://www.linkedin.com/in/chamithh/"
+    },
+    "github": {
+      "label": "GitHub",
+      "value": "GitHub",
+      "href": "https://github.com/chamithhirusha"
+    }
+  },
+  "location": {
+    "label": "Location",
+    "value": "Colombo, Sri Lanka",
+    "href": "https://www.google.com/maps/place/Colombo,+Sri+Lanka"
+  },
+  "resume": {
+    "label": "Resume",
+    "value": "Download Resume",
+    "href": "/files/Chamith_Hirusha_Resume.pdf"
+  }
+}

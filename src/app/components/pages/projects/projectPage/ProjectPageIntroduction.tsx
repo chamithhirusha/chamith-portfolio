@@ -1,12 +1,12 @@
 interface Props {
   description: string;
   details: {
-    WORKED_AREAS: string[];
-    ROLE: string;
-    DURATION: string;
-    TECHNOLOGIES: string[];
-    FEATURES: string[];
-    COLORS: string[];
+    workedAreas: string[];
+    role: string;
+    duration: string;
+    technologies: string[];
+    colors: string[];
+    features: string[];
   };
 }
 
@@ -27,7 +27,7 @@ export default function ProjectPageIntroduction({
               Worked areas
             </h3>
             <h4 className="text-[18px] md:text-[24px] xl:text-[28px] font-bold">
-              {details.WORKED_AREAS.join(", ")}
+              {details.workedAreas.join(", ")}
             </h4>
           </div>
           <hr className="theme-border-secondary" />
@@ -39,7 +39,7 @@ export default function ProjectPageIntroduction({
               Role
             </h3>
             <h4 className="text-[18px] md:text-[24px] xl:text-[28px] font-bold">
-              {details.ROLE}
+              {details.role}
             </h4>
           </div>
           <hr className="theme-border-secondary" />
@@ -51,7 +51,7 @@ export default function ProjectPageIntroduction({
               Duration
             </h3>
             <h4 className="text-[18px] md:text-[24px] xl:text-[28px] font-bold">
-              {details.DURATION}
+              {details.duration}
             </h4>
           </div>
           <hr className="theme-border-secondary" />
@@ -63,7 +63,7 @@ export default function ProjectPageIntroduction({
               Tech Stack
             </h3>
             <h4 className="text-[18px] md:text-[24px] xl:text-[28px] font-bold">
-              {details.TECHNOLOGIES.join(" | ")}
+              {details.technologies.join(" | ")}
             </h4>
           </div>
           <hr className="theme-border-secondary" />
@@ -75,7 +75,7 @@ export default function ProjectPageIntroduction({
               Theme
             </h3>
             <div className="flex gap-[20px] flex-wrap">
-              {details.COLORS.map((color, index) => (
+              {details.colors.map((color, index) => (
                 <div key={index} className="relative group cursor-pointer">
                   <div
                     className="size-6 md:size-8 rounded-full transition-transform duration-200 group-hover:scale-110 border border-white/20"
@@ -106,7 +106,7 @@ export default function ProjectPageIntroduction({
               Features
             </h3>
             <h4 className="text-[18px] md:text-[24px] xl:text-[28px] font-bold">
-              {details.FEATURES.join(", ")}
+              {details.features.join(", ")}
             </h4>
           </div>
         </div>

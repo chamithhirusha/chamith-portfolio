@@ -1,9 +1,9 @@
 import { useMemo, useRef, useState } from "react";
 import { ArrowDownLeftIcon } from "../../icons/Icons";
 import Badge from "../../badges/Badge";
-import config from "@/app/config.json";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import projects from "@/app/data/projects.json";
 
 interface Props {
   selectedRole: string;
@@ -14,14 +14,12 @@ export default function ProjectsGrid({ selectedRole, selectedYear }: Props) {
   const { push } = useRouter();
 
   const filteredProjects = useMemo(() => {
-    const projects = config.PROJECTS || [];
-
     return projects.filter((project) => {
       const roleMatch =
-        selectedRole === "All Categories" || project.CATEGORY === selectedRole;
+        selectedRole === "All Categories" || project.category === selectedRole;
 
       const yearMatch =
-        selectedYear === "All Years" || String(project.YEAR) === selectedYear;
+        selectedYear === "All Years" || String(project.year) === selectedYear;
 
       return roleMatch && yearMatch;
     });
@@ -40,7 +38,7 @@ export default function ProjectsGrid({ selectedRole, selectedYear }: Props) {
 
     intervalRef.current = setInterval(() => {
       setImageIndexes((prev) => {
-        const images = filteredProjects[i].IMAGES.IMAGE_FILES;
+        const images = filteredProjects[i].images.imageFiles;
         const current = prev[i] ?? 0;
 
         return {
@@ -79,36 +77,41 @@ export default function ProjectsGrid({ selectedRole, selectedYear }: Props) {
             key={i}
             onMouseEnter={() => startRotation(i)}
             onMouseLeave={stopRotation}
-            onClick={() => push(`/projects/${project.ID}`)}
+            onClick={() => push(`/projects/${project.id}`)}
             className="group clickable relative overflow-hidden rounded-[20px] w-full h-[350px] md:h-[450px] lg:h-[500px]"
           >
             {/* IMAGE WRAPPER */}
             <div className="absolute inset-0">
-              {/* THUMBNAIL */}
+              {/* THUMBNAIL (LCP OPTIMIZED) */}
               <Image
-                src={`/${project.IMAGES.THUMBNAIL}`}
-                alt={project.TITLE}
+                src={`/${project.images.thumbnail}`}
+                alt={project.title}
                 fill
                 priority
+                loading="eager"
+                fetchPriority="high"
+                sizes="(max-width: 768px) 100vw, 50vw"
                 className={`object-cover grayscale brightness-75 transition-opacity duration-700 ease-out group-hover:brightness-90 ${
                   hoveredIndex === i ? "opacity-0" : "opacity-100"
                 }`}
               />
 
-              {/* SLIDESHOW IMAGES */}
-              {project.IMAGES.IMAGE_FILES.map((img, idx) => (
-                <Image
-                  key={idx}
-                  src={`/${img}`}
-                  alt={`${project.TITLE}-${idx}`}
-                  fill
-                  className={`object-cover transition-opacity duration-700 ease-out ${
-                    hoveredIndex === i && (imageIndexes[i] ?? 0) === idx
-                      ? "opacity-100"
-                      : "opacity-0"
-                  }`}
-                />
-              ))}
+              {/* SLIDESHOW (ONLY ON HOVER → FIXES LCP CONFLICT) */}
+              {hoveredIndex === i &&
+                project.images.imageFiles.map((img, idx) => (
+                  <Image
+                    key={idx}
+                    src={`/${img}`}
+                    alt={`${project.title}-${idx}`}
+                    fill
+                    sizes="(max-width: 768px) 100vw, 50vw"
+                    className={`object-cover transition-opacity duration-700 ease-out ${
+                      (imageIndexes[i] ?? 0) === idx
+                        ? "opacity-100"
+                        : "opacity-0"
+                    }`}
+                  />
+                ))}
             </div>
 
             {/* OVERLAY */}
@@ -116,21 +119,23 @@ export default function ProjectsGrid({ selectedRole, selectedYear }: Props) {
 
             {/* CONTENT */}
             <div className="flex flex-col justify-between absolute inset-0 px-[30px] py-[25px] md:px-[40px] md:py-[30px]">
-              <div className="flex gap-[10px] flex-wrap">
-                {project.TAGS.map((tag, j) => (
-                  <Badge
-                    key={j}
-                    label={tag}
-                    className="theme-bg-foreground font-bold px-2! md:px-3! py-0.5! md:py-1!"
-                    textColor="theme-background"
-                    textClassName="text-xs md:text-sm"
-                  />
-                ))}
-              </div>
+              {project.tags && (
+                <div className="flex gap-[10px] flex-wrap">
+                  {project.tags.map((tag, j) => (
+                    <Badge
+                      key={j}
+                      label={tag}
+                      className="theme-bg-foreground font-bold px-2! md:px-3! py-0.5! md:py-1!"
+                      textColor="theme-background"
+                      textClassName="text-xs md:text-sm"
+                    />
+                  ))}
+                </div>
+              )}
 
               <div className="flex gap-5 items-end justify-between">
                 <h3 className="font-moho-condensed font-bold leading-tight text-[32px] md:text-[44px] lg:text-[56px]">
-                  {project.TITLE}
+                  {project.title}
                 </h3>
 
                 <ArrowDownLeftIcon

@@ -1,37 +1,7 @@
 import Badge from "../../badges/Badge";
+import skills from "@/app/data/skills.json";
 
 export default function AboutSkills() {
-  const skills = [
-    "React",
-    "JavaScript",
-    "TypeScript",
-    "Database Architecture",
-    "Cloud Deployment",
-    "Python",
-    "Authentication & Security",
-    "Django",
-    "SQL",
-    "MongoDB",
-    "Test-Driven Development",
-    "Docker",
-    "Git",
-    "UI/UX Design",
-    "Agile Methodologies",
-    "Performance Optimization",
-    "Node.js",
-    "Cross-Browser Compatibility",
-    "AWS",
-    "Responsive Design",
-    "API Development",
-    "Figma",
-    "Real-time Systems",
-    "Payment Gateway Integration",
-    "CI/CD Pipeline Setup",
-    "Modern UI Design",
-    "UX Optimization",
-    "Wireframing & Prototyping",
-  ];
-
   return (
     <>
       <div className="theme-default-padding-x">

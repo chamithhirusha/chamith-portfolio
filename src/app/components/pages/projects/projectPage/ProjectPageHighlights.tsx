@@ -2,9 +2,9 @@ import { SpecialStarIcon } from "@/app/components/icons/Icons";
 
 interface Props {
   highlights: {
-    TITLE: string;
-    DESCRIPTION: string;
-    YEAR: string;
+    title: string;
+    description: string;
+    year: string;
   }[];
 }
 
@@ -22,11 +22,11 @@ export default function ProjectPageHighlights({ highlights }: Props) {
 
                   <div className="flex flex-col">
                     <h3 className="font-bold text-[18px] md:text-[24px] leading-snug">
-                      {highlight.TITLE}
+                      {highlight.title}
                     </h3>
 
                     <p className="text-sm md:text-base theme-secondary leading-relaxed mt-[4px]">
-                      {highlight.DESCRIPTION}
+                      {highlight.description}
                     </p>
                   </div>
                 </div>
@@ -34,7 +34,7 @@ export default function ProjectPageHighlights({ highlights }: Props) {
                 {/* Year */}
                 <div className="sm:min-w-[80px] sm:text-right">
                   <p className="theme-foreground font-bold text-sm md:text-base">
-                    {highlight.YEAR}
+                    {highlight.year}
                   </p>
                 </div>
               </div>

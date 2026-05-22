@@ -19,7 +19,9 @@ export default function ProjectPageGallery({ imageFiles }: Props) {
                 src={`/${src}`}
                 alt={`img-${i}`}
                 fill
+                sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover"
+                priority={i === 0} // optional: only first image eager
               />
             </div>
           ))}
@@ -33,7 +35,9 @@ export default function ProjectPageGallery({ imageFiles }: Props) {
               src={`/${middle[0]}`}
               alt="middle"
               fill
+              sizes="100vw"
               className="object-cover"
+              priority // LCP candidate
             />
           </div>
         </div>
@@ -48,6 +52,7 @@ export default function ProjectPageGallery({ imageFiles }: Props) {
                   src={`/${src}`}
                   alt={`bottom-${i}`}
                   fill
+                  sizes="(max-width: 768px) 100vw, 80vw"
                   className="object-cover"
                 />
               </div>
@@ -57,6 +62,7 @@ export default function ProjectPageGallery({ imageFiles }: Props) {
                   src={`/${src}`}
                   alt={`bottom-${i}`}
                   fill
+                  sizes="(max-width: 768px) 100vw, 20vw"
                   className="object-cover"
                 />
               </div>

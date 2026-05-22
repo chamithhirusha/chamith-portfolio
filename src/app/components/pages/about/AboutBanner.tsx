@@ -18,6 +18,12 @@ export default function AboutBanner() {
           varient="secondary"
           className="text-[18px] md:text-[24px] xl:text-[32px] uppercase py-[10px]! px-[30px]! gap-[5px] lg:gap-[8px]"
           endIcon={<SolidCameraIcon className="size-8 lg:size-12" />}
+          onClick={() =>
+            window.open(
+              `https://cal.com/${process.env.NEXT_PUBLIC_CALCOM_USERNAME}`,
+              "_blank",
+            )
+          }
         />
       </div>
     </div>

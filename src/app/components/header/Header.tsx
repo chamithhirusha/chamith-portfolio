@@ -12,21 +12,20 @@ import {
 import { useRouter } from "next/navigation";
 import Button from "../buttons/Button";
 import SocialMediaIcon from "../buttons/SocialMediaIcon";
-import config from "@/app/config.json";
+import profile from "@/app/data/profile.json";
 
 const Header = () => {
   const { push } = useRouter();
-  const PROFILE = config.PROFILE;
 
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const SOCIAL_LINKS = [
-    { type: "whatsapp", link: PROFILE.WHATSAPP.URL },
-    { type: "linkedin", link: PROFILE.LINKEDIN.URL },
-    { type: "facebook", link: PROFILE.FACEBOOK.URL },
-    { type: "github", link: PROFILE.GITHUB.URL },
+    { type: "whatsapp", link: profile.contact.whatsapp.href },
+    { type: "linkedin", link: profile.social.linkedin.href },
+    { type: "facebook", link: profile.social.facebook.href },
+    { type: "github", link: profile.social.github.href },
   ] as const;
 
   const navigate = (path: string) => {

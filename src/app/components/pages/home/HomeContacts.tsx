@@ -2,7 +2,6 @@
 
 import { useState } from "react";
 
-import config from "@/app/config.json";
 import Alert from "../../alerts/Alert";
 import Button from "../../buttons/Button";
 import Link from "../../buttons/Link";
@@ -10,10 +9,9 @@ import { SolidCameraIcon } from "../../icons/Icons";
 import Checkbox from "../../inputs/Checkbox";
 import TextArea from "../../inputs/TextArea";
 import TextField from "../../inputs/TextField";
+import profile from "@/app/data/profile.json";
 
 export default function HomeContacts() {
-  const PROFILE = config.PROFILE;
-
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -139,18 +137,18 @@ export default function HomeContacts() {
   const contactData = [
     {
       label: "e-mail",
-      value: PROFILE.EMAIL.TEXT,
-      url: PROFILE.EMAIL.URL,
+      value: profile.contact.email.value,
+      url: profile.contact.email.href,
     },
     {
       label: "Phone",
-      value: PROFILE.PHONE.TEXT,
-      url: PROFILE.PHONE.URL,
+      value: profile.contact.phone.value,
+      url: profile.contact.phone.href,
     },
     {
       label: "Location",
-      value: PROFILE.LOCATION.TEXT,
-      url: PROFILE.LOCATION.URL,
+      value: profile.location.value,
+      url: profile.location.href,
     },
   ];
 

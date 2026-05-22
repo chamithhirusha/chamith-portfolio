@@ -1,0 +1,33 @@
+{
+  "frontend": [
+    "Responsive, Mobile-First Websites",
+    "Figma to Pixel-Perfect UI",
+    "API Integration",
+    "Performance Optimization",
+    "Smooth Animations & Interactions"
+  ],
+  "backend": [
+    "API Development",
+    "Authentication & Security",
+    "Real-time Systems",
+    "Payment Gateway Integration",
+    "Scalability & Performance Optimization"
+  ],
+  "database": [
+    "Database Design & Management",
+    "SQL & NoSQL",
+    "Query Optimization",
+    "Data Migration & Backup"
+  ],
+  "devops": [
+    "CI/CD Pipelines",
+    "Docker & Containerization",
+    "Cloud Deployment"
+  ],
+  "uiux": [
+    "Modern UI Design",
+    "Wireframing & Prototyping",
+    "Usability Testing",
+    "UX Optimization"
+  ]
+}
