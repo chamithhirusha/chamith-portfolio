@@ -7,7 +7,7 @@ interface Props {
 export default function ProjectPageTitle({ name, year, thumbnail }: Props) {
   return (
     <div
-      className="flex flex-col justify-end theme-default-padding-x theme-default-padding-y h-[900px]"
+      className="flex flex-col justify-end theme-default-padding-x theme-default-padding-y min-h-[600px] h-screen"
       style={{
         backgroundImage: `
           linear-gradient(

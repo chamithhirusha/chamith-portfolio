@@ -16,7 +16,7 @@ export default function ProjectPageIntroduction({
 }: Props) {
   return (
     <div className="flex flex-col gap-[50px] md:gap-[100px] theme-default-padding-x theme-default-padding-y">
-      <h3 className="font-moho-condensed tracking-wide leading-tight font-bold text-[50px] md:text-[110px] uppercase">
+      <h3 className="text-[18px] md:text-[24px] xl:text-[28px] theme-secondary">
         {description}
       </h3>
 
