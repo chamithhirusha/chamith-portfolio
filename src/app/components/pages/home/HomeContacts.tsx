@@ -1,13 +1,141 @@
+"use client";
+
+import { useState } from "react";
+
+import config from "@/app/config.json";
+import Alert from "../../alerts/Alert";
 import Button from "../../buttons/Button";
 import Link from "../../buttons/Link";
 import { SolidCameraIcon } from "../../icons/Icons";
 import Checkbox from "../../inputs/Checkbox";
 import TextArea from "../../inputs/TextArea";
 import TextField from "../../inputs/TextField";
-import config from "@/app/config.json";
 
 export default function HomeContacts() {
   const PROFILE = config.PROFILE;
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [agreed, setAgreed] = useState(false);
+
+  const [alert, setAlert] = useState<{
+    type: "success" | "error" | "info";
+    message: string;
+  } | null>(null);
+
+  const closeAlert = () => setAlert(null);
+
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const phoneRegex = /^[0-9+\-\s]+$/;
+
+  const handleSubmit = async () => {
+    // TERMS
+    if (!agreed) {
+      setAlert({
+        type: "error",
+        message: "Please agree to the terms and conditions.",
+      });
+      return;
+    }
+
+    // NAME
+    if (!formData.name.trim()) {
+      setAlert({
+        type: "error",
+        message: "Name is required.",
+      });
+      return;
+    }
+
+    // EMAIL
+    if (!formData.email.trim()) {
+      setAlert({
+        type: "error",
+        message: "Email is required.",
+      });
+      return;
+    }
+
+    if (!emailRegex.test(formData.email)) {
+      setAlert({
+        type: "error",
+        message: "Please enter a valid email address.",
+      });
+      return;
+    }
+
+    // PHONE
+    if (!formData.phone.trim()) {
+      setAlert({
+        type: "error",
+        message: "Phone number is required.",
+      });
+      return;
+    }
+
+    if (!phoneRegex.test(formData.phone)) {
+      setAlert({
+        type: "error",
+        message: "Phone number can only contain numbers, +, - and spaces.",
+      });
+      return;
+    }
+
+    // MESSAGE
+    if (!formData.message.trim()) {
+      setAlert({
+        type: "error",
+        message: "Please enter your message.",
+      });
+      return;
+    }
+
+    try {
+      setLoading(true);
+
+      const response = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || "Something went wrong");
+      }
+
+      setAlert({
+        type: "success",
+        message: "Message sent successfully!",
+      });
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "",
+      });
+
+      setAgreed(false);
+    } catch {
+      setAlert({
+        type: "error",
+        message: "Failed to send message. Please try again.",
+      });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   const contactData = [
     {
       label: "e-mail",
@@ -31,6 +159,11 @@ export default function HomeContacts() {
       id="home-contacts"
       className="flex flex-col lg:flex-row theme-default-padding-x theme-default-padding-y gap-[50px] md:gap-[80px]"
     >
+      {/* ALERT */}
+      {alert && (
+        <Alert type={alert.type} message={alert.message} onClose={closeAlert} />
+      )}
+
       {/* LEFT */}
       <div className="flex flex-col w-full gap-[20px]">
         <div className="mb-[50px]">
@@ -38,8 +171,15 @@ export default function HomeContacts() {
             text="Book a call"
             className="text-[18px] md:text-[24px] xl:text-[32px] uppercase py-[10px]! px-[30px]! gap-[5px] lg:gap-[8px]"
             endIcon={<SolidCameraIcon className="size-8 lg:size-12" />}
+            onClick={() =>
+              window.open(
+                `https://cal.com/${process.env.NEXT_PUBLIC_CALCOM_USERNAME}`,
+                "_blank",
+              )
+            }
           />
         </div>
+
         {contactData.map((item, index) => (
           <div key={index} className="flex flex-col gap-[20px] w-full">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-[10px] md:gap-[20px]">
@@ -66,31 +206,54 @@ export default function HomeContacts() {
         <div className="flex flex-col w-full">
           <TextField
             placeholder="Your Name"
+            value={formData.name}
+            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
             className="text-[18px] md:text-[24px]"
           />
+
           <TextField
             placeholder="Your E-Mail"
+            value={formData.email}
+            onChange={(e) =>
+              setFormData({ ...formData, email: e.target.value })
+            }
             className="text-[18px] md:text-[24px]"
           />
+
           <TextField
             placeholder="Phone"
+            value={formData.phone}
+            onChange={(e) =>
+              setFormData({ ...formData, phone: e.target.value })
+            }
             className="text-[18px] md:text-[24px]"
           />
+
           <TextArea
             placeholder="Describe your project..."
+            value={formData.message}
+            onChange={(e) =>
+              setFormData({ ...formData, message: e.target.value })
+            }
             className="text-[18px] md:text-[24px] h-[200px] md:h-[350px] max-h-[300px] md:max-h-[400px]"
             rows={60}
           />
         </div>
+
         <Checkbox
+          checked={agreed}
+          onChange={(e) => setAgreed(e.target.checked)}
           label="I agree to the terms and conditions."
           labelClassName="text-[18px] md:text-[24px] font-bold theme-secondary"
           className="p-3 mr-[10px]"
         />
+
         <Button
-          text="Send Message"
+          text={loading ? "Sending..." : "Send Message"}
           varient="secondary"
+          disabled={loading}
           className="text-[18px] md:text-[24px] xl:text-[32px] uppercase py-[10px]! px-[10px]! mb-[20px]"
+          onClick={handleSubmit}
         />
       </div>
     </div>
