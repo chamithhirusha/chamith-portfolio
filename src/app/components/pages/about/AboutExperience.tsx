@@ -1,45 +1,7 @@
 import Badge from "../../badges/Badge";
+import experience from "@/app/data/experience.json";
 
 export default function AboutExperience() {
-  const experience = [
-    {
-      title: "Frontend Engineer",
-      company: "Meta",
-      duration: {
-        start: "2025",
-        end: "Present",
-        isCurrent: true,
-      },
-    },
-    {
-      title: "UI/UX Designer",
-      company: "Google",
-      duration: {
-        start: "2023",
-        end: "2025",
-        isCurrent: false,
-      },
-    },
-    {
-      title: "Full Stack Developer",
-      company: "Amazon",
-      duration: {
-        start: "2020",
-        end: "2023",
-        isCurrent: false,
-      },
-    },
-    {
-      title: "Intern",
-      company: "Microsoft",
-      duration: {
-        start: "2019",
-        end: "2020",
-        isCurrent: false,
-      },
-    },
-  ];
-
   return (
     <>
       <div className="theme-default-padding-x">
@@ -67,23 +29,33 @@ export default function AboutExperience() {
                   className="flex flex-col items-center md:items-start"
                 >
                   <div className="flex gap-[10px] mb-[10px] theme-secondary">
-                    <p>{experience.duration.start}</p> <p> - </p>{" "}
-                    {experience.duration.isCurrent ? (
+                    <p>{experience.startDate}</p> <p> - </p>{" "}
+                    {experience.isCurrent ? (
                       <p className="theme-foreground font-bold">Present</p>
                     ) : (
-                      <p className="theme-secondary">
-                        {experience.duration.end}
-                      </p>
+                      <p className="theme-secondary">{experience.endDate}</p>
                     )}
                   </div>
 
                   <h3 className="font-bold text-[18px] md:text-[24px] capitalize">
-                    {experience.title}
+                    {experience.role}
                   </h3>
 
                   <div className="flex gap-[10px] mt-[10px] max-w-[500px]">
                     <p className="text-sm md:text-base theme-secondary leading-relaxed">
-                      at {experience.company}
+                      at{" "}
+                      {experience.companyUrl ? (
+                        <a
+                          href={experience.companyUrl}
+                          className="hover:underline"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {experience.company}
+                        </a>
+                      ) : (
+                        experience.company
+                      )}
                     </p>
                   </div>
                 </div>

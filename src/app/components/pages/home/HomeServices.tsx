@@ -6,58 +6,34 @@ import {
   DatabaseIcon,
   PuzzlePieceIcon,
 } from "../../icons/Icons";
+import services from "@/app/data/services.json";
 
 export default function HomeServices() {
-  const services = [
+  const servicesData = [
     {
       title: "Frontend",
       icon: PuzzlePieceIcon,
-      items: [
-        "Responsive, Mobile-First Websites",
-        "Figma to Pixel-Perfect UI",
-        "API Integration",
-        "Performance Optimization",
-        "Smooth Animations & Interactions",
-      ],
+      items: services.frontend,
     },
     {
       title: "Backend",
       icon: BeakerIcon,
-      items: [
-        "API Development",
-        "Authentication & Security",
-        "Real-time Systems",
-        "Payment Gateway Integration",
-        "Database Architecture",
-      ],
+      items: services.backend,
     },
     {
       title: "Database",
       icon: DatabaseIcon,
-      items: [
-        "Database Design",
-        "SQL & NoSQL",
-        "Query Optimization",
-        "Data Migration & Backup",
-      ],
+      items: services.database,
     },
     {
       title: "DevOps",
       icon: CubeIcon,
-      items: [
-        "Docker & Containerization",
-        "CI/CD Pipeline Setup",
-        "Cloud Deployment",
-      ],
+      items: services.devops,
     },
     {
       title: "UI/UX",
       icon: BrushIcon,
-      items: [
-        "Modern UI Design",
-        "UX Optimization",
-        "Wireframing & Prototyping",
-      ],
+      items: services.uiux,
     },
   ];
 
@@ -66,8 +42,8 @@ export default function HomeServices() {
       id="home-services"
       className="flex flex-col theme-default-padding-x theme-default-padding-y gap-[50px]"
     >
-      {services.map((service, index) => {
-        const Icon = service.icon;
+      {servicesData.map((serviceItem, index) => {
+        const Icon = serviceItem.icon;
 
         return (
           <div
@@ -116,19 +92,19 @@ export default function HomeServices() {
                 </div>
                 <div className="flex items-center justify-center h-[30px]">
                   <h3 className="tracking-wide font-moho-condensed font-bold text-[64px] md:text-[128px] uppercase">
-                    {service.title}
+                    {serviceItem.title}
                   </h3>
                 </div>
               </div>
 
               {/* right side */}
               <div className="flex flex-col gap-[20px] xl:gap-[30px] w-full xl:w-1/2">
-                {service.items.map((item, i) => (
+                {serviceItem.items.map((item, i) => (
                   <div key={i} className="flex flex-col gap-[20px]">
                     <h4 className="font-bold text-[18px] md:text-[24px] xl:text-[28px] theme-secondary">
                       {item}
                     </h4>
-                    {i !== service.items.length - 1 && (
+                    {i !== serviceItem.items.length - 1 && (
                       <hr className="theme-border-secondary" />
                     )}
                   </div>

@@ -1,5 +1,5 @@
 import Dropdown from "../../dropdown/Dropdown";
-import config from "@/app/config.json";
+import projects from "@/app/data/projects.json";
 
 interface Props {
   selectedRole: string;
@@ -59,7 +59,7 @@ export default function ProjectsTitle({
         </div>
 
         <p className="font-bold text-md sm:text-lg">
-          {config.PROJECTS?.length || 0} Completed projects
+          {projects.length} Completed projects
         </p>
       </div>
 

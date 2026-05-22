@@ -1,35 +1,8 @@
 import Badge from "../../badges/Badge";
 import { SpecialStarIcon } from "../../icons/Icons";
+import certifications from "@/app/data/certifications.json";
 
 export default function AboutCertifications() {
-  const certifications = [
-    {
-      name: "AWS Certified Solution Architect - Associate",
-      institue: "AWS",
-      year: "2026",
-    },
-    {
-      name: "Google UX Design Professional Certificate",
-      institue: "Google",
-      year: "2025",
-    },
-    {
-      name: "Microsoft Certified: Azure Developer Associate",
-      institue: "Microsoft",
-      year: "2024",
-    },
-    {
-      name: "Certified Kubernetes Application Developer (CKAD)",
-      institue: "Cloud Native Computing Foundation",
-      year: "2024",
-    },
-    {
-      name: "Scrum Master Certified (SMC)",
-      institue: "Scrum Alliance",
-      year: "2023",
-    },
-  ];
-
   return (
     <>
       <div className="theme-default-padding-x">
@@ -62,15 +35,30 @@ export default function AboutCertifications() {
                           {certification.name}
                         </h3>
 
-                        <p className="text-sm md:text-base theme-secondary leading-relaxed mt-[4px]">
-                          {certification.institue}
-                        </p>
+                        <div className="flex flex-col md:flex-row md:items-center md:gap-[12px] mt-[4px]">
+                          <p className="text-sm md:text-base theme-secondary leading-relaxed mt-[4px]">
+                            {certification.issuer}
+                          </p>
+
+                          {certification.credentialUrl && (
+                            <a
+                              href={certification.credentialUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="text-sm md:text-base font-bold theme-foreground hover:underline mt-[4px]"
+                            >
+                              {certification.credentialId
+                                ? `Credential ID: ${certification.credentialId}`
+                                : "Verify Credential"}
+                            </a>
+                          )}
+                        </div>
                       </div>
                     </div>
 
                     {/* Year */}
                     <div className="sm:min-w-[80px] sm:text-right">
-                      <p className="theme-foreground font-bold text-sm md:text-base">
+                      <p className="theme-foreground font-bold text-sm md:text-base capitalize">
                         {certification.year}
                       </p>
                     </div>

@@ -1,0 +1,18 @@
+[
+  {
+    "role": "Full Stack Developer",
+    "company": "CodeLK Pvt Ltd",
+    "companyUrl": "https://www.codelk.com/",
+    "startDate": "Aug 2023",
+    "endDate": "Present",
+    "isCurrent": true
+  },
+  {
+    "role": "Frontend Developer",
+    "company": "CodeLK Pvt Ltd",
+    "companyUrl": "https://www.codelk.com/",
+    "startDate": "Jan 2022",
+    "endDate": "Aug 2023",
+    "isCurrent": false
+  }
+]

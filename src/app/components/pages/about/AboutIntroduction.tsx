@@ -1,6 +1,7 @@
 import Image from "next/image";
 import CircleButton from "../../buttons/CircleButton";
 import { useRouter } from "next/navigation";
+import stats from "@/app/data/stats.json";
 
 export default function AboutIntroduction() {
   const { push } = useRouter();
@@ -9,8 +10,9 @@ export default function AboutIntroduction() {
     <div className="theme-default-padding-x theme-default-padding-ye">
       <div className="flex justify-center md:justify-end">
         <h3 className="font-moho-condensed text-center md:text-end tracking-wide leading-tight font-bold text-[50px] md:text-[110px] w-auto xl:w-9/12 uppercase">
-          Hi there. I&apos;m Chamith Hirusha, a creative digital designer
-          dedicated to turning concepts into stunning visual experiences.
+          I&apos;m Chamith Hirusha, a Full Stack Developer who excels at
+          bridging the gap between UI/UX design and high-performance
+          engineering.
         </h3>
       </div>
       <div className="flex flex-col flex-col-reverse md:flex-row justify-center md:justify-between items-center md:items-start gap-[50px] mt-[50px]">
@@ -19,7 +21,7 @@ export default function AboutIntroduction() {
             <div className="flex items-center py-[25px]">
               <div className="flex justify-center items-center h-[100px]">
                 <h4 className="font-moho-condensed font-bold text-[50px] md:text-[80px] xl:text-[128px] w-[60px] md:w-[80px] xl:w-[130px]">
-                  31
+                  {stats.projects}
                 </h4>
               </div>
               <p className="font-bold text-[18px] md:text-[24px]">
@@ -33,7 +35,7 @@ export default function AboutIntroduction() {
             <div className="flex items-center py-[25px]">
               <div className="flex justify-center items-center h-[100px]">
                 <h4 className="font-moho-condensed font-bold text-[50px] md:text-[80px] xl:text-[128px] w-[60px] md:w-[80px] xl:w-[130px]">
-                  05
+                  {stats.experience}
                 </h4>
               </div>
               <p className="font-bold text-[18px] md:text-[24px]">
@@ -47,7 +49,7 @@ export default function AboutIntroduction() {
             <div className="flex items-center py-[25px]">
               <div className="flex justify-center items-center h-[100px]">
                 <h4 className="font-moho-condensed font-bold text-[50px] md:text-[80px] xl:text-[128px] w-[60px] md:w-[80px] xl:w-[130px]">
-                  04
+                  {stats.collaborations}
                 </h4>
               </div>
               <p className="font-bold text-[18px] md:text-[24px]">

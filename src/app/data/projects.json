@@ -1,0 +1,275 @@
+[
+  {
+    "id": "0",
+    "title": "Breakdown Assistant",
+    "description": "A mobile application designed to provide assistance to drivers in the event of a vehicle breakdown. The app offers features such as real-time location tracking, emergency contact notifications, and a directory of nearby repair shops and towing services.",
+    "year": "2026",
+    "category": "FRONTEND",
+    "images": {
+      "thumbnail": "images/projects/vehicle-breakdown-assistance-app/img3.png",
+      "imageFiles": [
+        "images/projects/vehicle-breakdown-assistance-app/img1.png",
+        "images/projects/vehicle-breakdown-assistance-app/img2.png",
+        "images/projects/vehicle-breakdown-assistance-app/img3.png",
+        "images/projects/vehicle-breakdown-assistance-app/img4.png",
+        "images/projects/vehicle-breakdown-assistance-app/img5.png"
+      ]
+    },
+    "details": {
+      "workedAreas": ["UI/UX Design", "Frontend Development"],
+      "role": "Lead Designer and Frontend Developer",
+      "duration": "6 months",
+      "technologies": ["React Native", "Expo", "Firebase"],
+      "features": [
+        "Real-time Location Tracking",
+        "Emergency Contact Notifications",
+        "Directory of Nearby Repair Shops and Towing Services",
+        "User-friendly Interface",
+        "Offline Functionality"
+      ],
+      "colors": [
+        "#F3F3F3",
+        "#000000",
+        "#FFFFFF",
+        "#7F7F7F",
+        "#ABABAB",
+        "#FF0000",
+        "#1FBD78",
+        "#BD1F41",
+        "#FE9900"
+      ]
+    },
+    "highlights": [
+      {
+        "title": "Real-time Location Tracking",
+        "description": "The app utilizes GPS technology to provide real-time location tracking, allowing users to share their location with emergency contacts and service providers for quick assistance.",
+        "year": "2026"
+      },
+      {
+        "title": "Emergency Contact Notifications",
+        "description": "In the event of a breakdown, the app automatically sends notifications to pre-selected emergency contacts, providing them with the user's location and details of the situation.",
+        "year": "2026"
+      },
+      {
+        "title": "Directory of Nearby Repair Shops and Towing Services",
+        "description": "The app includes a comprehensive directory of nearby repair shops and towing services, allowing users to quickly find and contact assistance in their area.",
+        "year": "2026"
+      }
+    ],
+    "tags": ["React", "Next.js"]
+  },
+  {
+    "id": "1",
+    "title": "S.A.M.",
+    "description": "An art management system designed to streamline the organization and curation of art collections. The system provides features such as inventory management, exhibition planning, and artist collaboration tools.",
+    "year": "2024",
+    "category": "FULL - STACK",
+    "images": {
+      "thumbnail": "images/projects/sam-app/img2.png",
+      "imageFiles": [
+        "images/projects/sam-app/img1.png",
+        "images/projects/sam-app/img2.png",
+        "images/projects/sam-app/img3.png"
+      ]
+    },
+    "details": {
+      "workedAreas": [
+        "UI/UX Design",
+        "Frontend Development",
+        "Backend Development"
+      ],
+      "role": "Full Stack Developer",
+      "duration": "8 months",
+      "technologies": ["React", "Node.js", "Express", "MongoDB"],
+      "features": [
+        "Inventory Management",
+        "Exhibition Planning",
+        "Artist Collaboration Tools",
+        "User-friendly Interface",
+        "Secure Authentication"
+      ],
+      "colors": [
+        "#8947F9",
+        "#FFFFFF",
+        "#BD1F41",
+        "#EADFFC",
+        "#000000",
+        "#FE9900"
+      ]
+    },
+    "highlights": [
+      {
+        "title": "Inventory Management",
+        "description": "The system provides robust inventory management features, allowing users to catalog and track their art collections with ease.",
+        "year": "2024"
+      },
+      {
+        "title": "Exhibition Planning",
+        "description": "S.A.M. includes tools for planning and organizing exhibitions, enabling users to create detailed exhibition layouts and schedules.",
+        "year": "2024"
+      },
+      {
+        "title": "Artist Collaboration Tools",
+        "description": "The platform facilitates collaboration between artists, curators, and collectors, providing tools for communication and project management.",
+        "year": "2024"
+      }
+    ],
+    "tags": ["React", "Next.js"]
+  },
+  {
+    "id": "2",
+    "title": "Digital Banking",
+    "description": "A digital banking application designed to provide a seamless online banking experience. The app features a user-friendly interface, secure payment processing, and a wide range of financial services.",
+    "year": "2024",
+    "category": "FRONTEND",
+    "images": {
+      "thumbnail": "images/projects/digital-banking-app/img3.png",
+      "imageFiles": [
+        "images/projects/digital-banking-app/img1.png",
+        "images/projects/digital-banking-app/img2.png",
+        "images/projects/digital-banking-app/img3.png",
+        "images/projects/digital-banking-app/img4.png",
+        "images/projects/digital-banking-app/img5.png",
+        "images/projects/digital-banking-app/img6.png"
+      ]
+    },
+    "details": {
+      "workedAreas": ["UI/UX Design", "Frontend Development"],
+      "role": "Lead Designer and Frontend Developer",
+      "duration": "6 months",
+      "technologies": ["React Native", "Expo", "Firebase"],
+      "features": [
+        "User-friendly Interface",
+        "Secure Payment Processing",
+        "Wide Range of Financial Services",
+        "Real-time Transaction Tracking",
+        "Personalized Financial Insights"
+      ],
+      "colors": ["#962742", "#000000", "#FFFFFF", "#6A6A6A", "#1F1F1F"]
+    },
+    "highlights": [
+      {
+        "title": "User-friendly Interface",
+        "description": "The app features a clean and intuitive interface that makes it easy for users to navigate and access all the necessary functions.",
+        "year": "2024"
+      },
+      {
+        "title": "Secure Payment Processing",
+        "description": "The app ensures secure and reliable payment processing, protecting user financial information and providing a seamless checkout experience.",
+        "year": "2024"
+      },
+      {
+        "title": "Wide Range of Financial Services",
+        "description": "The app offers a comprehensive suite of financial services, including account management, transaction history, and personalized financial insights.",
+        "year": "2024"
+      }
+    ],
+    "tags": ["React", "Next.js"]
+  },
+  {
+    "id": "3",
+    "title": "E-commerce Platform",
+    "description": "An e-commerce platform dedicated to the sale of vehicle spare parts. The platform offers a wide selection of products, secure payment options, and efficient delivery services to cater to the needs of automotive enthusiasts and repair shops.",
+    "year": "2023",
+    "category": "FRONTEND",
+    "images": {
+      "thumbnail": "images/projects/vehicle-parts-ecommerce-app/img1.png",
+      "imageFiles": [
+        "images/projects/vehicle-parts-ecommerce-app/img1.png",
+        "images/projects/vehicle-parts-ecommerce-app/img2.png",
+        "images/projects/vehicle-parts-ecommerce-app/img3.png",
+        "images/projects/vehicle-parts-ecommerce-app/img4.png",
+        "images/projects/vehicle-parts-ecommerce-app/img5.png",
+        "images/projects/vehicle-parts-ecommerce-app/img6.png",
+        "images/projects/vehicle-parts-ecommerce-app/img7.png",
+        "images/projects/vehicle-parts-ecommerce-app/img8.png"
+      ]
+    },
+    "details": {
+      "workedAreas": ["UI/UX Design", "Frontend Development"],
+      "role": "Lead Designer and Frontend Developer",
+      "duration": "6 months",
+      "technologies": ["React Native", "Expo", "Firebase"],
+      "features": [
+        "User-friendly Interface",
+        "Secure Payment Processing",
+        "Wide Range of Financial Services",
+        "Real-time Transaction Tracking",
+        "Personalized Financial Insights"
+      ],
+      "colors": [
+        "#DB4444",
+        "#FFFFFF",
+        "#000000",
+        "#FFAD33",
+        "#33FF3B",
+        "#F2F2F2"
+      ]
+    },
+    "highlights": [
+      {
+        "title": "User-friendly Interface",
+        "description": "The app features a clean and intuitive interface that makes it easy for users to navigate and access all the necessary functions.",
+        "year": "2024"
+      },
+      {
+        "title": "Secure Payment Processing",
+        "description": "The app ensures secure and reliable payment processing, protecting user financial information and providing a seamless checkout experience.",
+        "year": "2024"
+      },
+      {
+        "title": "Wide Range of Financial Services",
+        "description": "The app offers a comprehensive suite of financial services, including account management, transaction history, and personalized financial insights.",
+        "year": "2024"
+      }
+    ],
+    "tags": ["React", "Next.js"]
+  },
+  {
+    "id": "4",
+    "title": "CodeLK Website",
+    "description": "A modern website for CodeLK, showcasing their services and portfolio. The site features a responsive design, intuitive navigation, and a clean aesthetic to provide an excellent user experience.",
+    "year": "2023",
+    "category": "UI / UX DESIGN",
+    "images": {
+      "thumbnail": "images/projects/codelk-website/img3.png",
+      "imageFiles": [
+        "images/projects/codelk-website/img1.png",
+        "images/projects/codelk-website/img2.png",
+        "images/projects/codelk-website/img3.png",
+        "images/projects/codelk-website/img4.png",
+        "images/projects/codelk-website/img5.png",
+        "images/projects/codelk-website/img6.png"
+      ]
+    },
+    "details": {
+      "workedAreas": ["UI/UX Design", "Frontend Development"],
+      "role": "Lead Designer and Frontend Developer",
+      "duration": "6 months",
+      "technologies": ["React", "Next.js"],
+      "features": [
+        "Responsive Design",
+        "Intuitive Navigation",
+        "Clean Aesthetic"
+      ],
+      "colors": ["#0D6EFD", "#FFFFFF", "#000000", "#CDCDCD", "#000C1D"]
+    },
+    "highlights": [
+      {
+        "title": "Responsive Design",
+        "description": "The website features a responsive design that adapts to different screen sizes, ensuring a consistent user experience across all devices.",
+        "year": "2024"
+      },
+      {
+        "title": "Intuitive Navigation",
+        "description": "The site offers intuitive navigation that makes it easy for users to find the information they need quickly and efficiently.",
+        "year": "2024"
+      },
+      {
+        "title": "Clean Aesthetic",
+        "description": "The website boasts a clean and modern aesthetic that enhances the overall user experience and showcases the services effectively.",
+        "year": "2024"
+      }
+    ]
+  }
+]

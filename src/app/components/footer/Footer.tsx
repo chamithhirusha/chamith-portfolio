@@ -1,14 +1,13 @@
 import Link from "../buttons/Link";
 import SocialMediaIcon from "../buttons/SocialMediaIcon";
-import config from "@/app/config.json";
+import profile from "@/app/data/profile.json";
 
 const Footer = () => {
-  const PROFILE = config.PROFILE;
   const SOCIAL_LINKS = [
-    { type: "whatsapp", link: PROFILE.WHATSAPP.URL },
-    { type: "linkedin", link: PROFILE.LINKEDIN.URL },
-    { type: "facebook", link: PROFILE.FACEBOOK.URL },
-    { type: "github", link: PROFILE.GITHUB.URL },
+    { type: "whatsapp", link: profile.contact.whatsapp.href },
+    { type: "linkedin", link: profile.social.linkedin.href },
+    { type: "facebook", link: profile.social.facebook.href },
+    { type: "github", link: profile.social.github.href },
   ] as const;
 
   return (
@@ -32,8 +31,8 @@ const Footer = () => {
           <div className="relative xl:absolute w-full xl:w-auto left-1/2 -translate-x-1/2 flex justify-center items-center py-[10px] md:py-[20px] px-[10px] md:px-[50px] border-2 theme-border-secondary rounded-full">
             <h4 className="text-[18px] md:text-[24px] font-bold">
               <Link
-                text={PROFILE.EMAIL.TEXT}
-                link={PROFILE.EMAIL.URL}
+                text={profile.contact.email.value}
+                link={profile.contact.email.href}
                 target="_blank"
               />
             </h4>

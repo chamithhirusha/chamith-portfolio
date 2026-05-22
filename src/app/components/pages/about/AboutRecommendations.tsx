@@ -1,40 +1,10 @@
-import config from "@/app/config.json";
 import Image from "next/image";
 import Badge from "../../badges/Badge";
 import CircleButton from "../../buttons/CircleButton";
+import recommendations from "@/app/data/recommendations.json";
+import profile from "@/app/data/profile.json";
 
 export default function AboutRecommendations() {
-  const recommendations = [
-    {
-      name: "John Doe",
-      designation: "Senior Software Engineer at Meta",
-      profileImage: "/images/avatar-200x200.jpg",
-      recommendation:
-        "Chamith is an exceptional frontend engineer with a keen eye for detail and a passion for creating seamless user experiences. His ability to translate complex design concepts into pixel-perfect implementations is truly impressive. He consistently delivers high-quality work, meets deadlines, and is a great team player. I highly recommend Chamith for any frontend development role.",
-    },
-    {
-      name: "Jane Smith",
-      designation: "UI/UX Designer at Google",
-      profileImage: "/images/avatar-200x200.jpg",
-      recommendation:
-        "Chamith is a talented UI/UX designer who consistently produces visually stunning and user-friendly designs. His creativity, attention to detail, and ability to understand user needs are remarkable. He is a pleasure to work with, always open to feedback, and delivers exceptional results. I highly recommend Chamith for any UI/UX design role.",
-    },
-    {
-      name: "Michael Johnson",
-      designation: "Full Stack Developer at Amazon",
-      profileImage: "/images/avatar-200x200.jpg",
-      recommendation:
-        "Chamith is a skilled full stack developer with expertise in both frontend and backend technologies. He has a strong problem-solving mindset, excellent coding skills, and a deep understanding of software architecture. He consistently delivers high-quality code, meets project deadlines, and is a great collaborator. I highly recommend Chamith for any full stack development role.",
-    },
-    {
-      name: "Emily Davis",
-      designation: "DevOps Engineer at Microsoft",
-      profileImage: "/images/avatar-200x200.jpg",
-      recommendation:
-        "Chamith is a proficient DevOps engineer with a solid understanding of cloud infrastructure, automation, and continuous integration. He has a strong work ethic, excellent communication skills, and a collaborative approach to problem-solving. He consistently delivers reliable and scalable solutions, making him an asset to any DevOps team. I highly recommend Chamith for any DevOps engineering role.",
-    },
-  ];
-
   const mobileItemCount = 3;
   const desktopItemCount = recommendations.length;
 
@@ -65,10 +35,10 @@ export default function AboutRecommendations() {
                     isHiddenOnMobile ? "hidden md:flex" : "flex"
                   } flex-col`}
                 >
-                  <div className="flex mb-[20px] gap-[20px] items-center">
-                    <div className="relative flex h-[48px] md:h-[62px] aspect-square border theme-border-secondary-light rounded-full overflow-hidden">
+                  <div className="flex mb-[20px] gap-[20px]">
+                    <div className="relative w-[48px] h-[48px] md:w-[62px] md:h-[62px] shrink-0 border theme-border-secondary-light rounded-full overflow-hidden">
                       <Image
-                        src={rec.profileImage}
+                        src={rec.photoUrl}
                         alt={rec.name}
                         fill
                         sizes="(max-width: 768px) 48px, 62px"
@@ -82,13 +52,27 @@ export default function AboutRecommendations() {
                       </h3>
 
                       <h4 className="text-sm font-bold theme-secondary uppercase">
-                        {rec.designation}
+                        {rec.position}
                       </h4>
                     </div>
                   </div>
 
-                  <p className="theme-bg-overlay p-5 rounded-[15px] text-sm md:text-base theme-secondary leading-relaxed">
-                    {rec.recommendation}
+                  <p className="theme-bg-overlay p-5 rounded-[15px] text-sm md:text-base theme-secondary leading-relaxed whitespace-pre-line">
+                    {rec.recommendation}{" "}
+                    {rec.source && (
+                      <>
+                        <br />
+                        <br />
+                        <a
+                          href={rec.sourceUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="hover:underline font-bold theme-secondary text-sm"
+                        >
+                          [ {rec.source} ]
+                        </a>
+                      </>
+                    )}
                   </p>
                 </div>
               );
@@ -98,7 +82,7 @@ export default function AboutRecommendations() {
               <CircleButton
                 onClick={() =>
                   window.open(
-                    config.PROFILE.LINKEDIN.URL + "details/recommendations/",
+                    profile.social.linkedin.href + "details/recommendations/",
                     "_blank",
                     "noopener,noreferrer",
                   )
