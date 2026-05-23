@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Badge from "../../badges/Badge";
 import CircleButton from "../../buttons/CircleButton";
+import MotionElement from "../../motion/MotionElement";
 import recommendations from "@/app/data/recommendations.json";
 import profile from "@/app/data/profile.json";
 
@@ -29,8 +30,10 @@ export default function AboutRecommendations() {
               const isHiddenOnMobile = index >= mobileItemCount;
 
               return (
-                <div
+                <MotionElement
                   key={index}
+                  variant="tilt"
+                  delay={index * 0.06}
                   className={`${
                     isHiddenOnMobile ? "hidden md:flex" : "flex"
                   } flex-col`}
@@ -74,11 +77,14 @@ export default function AboutRecommendations() {
                       </>
                     )}
                   </p>
-                </div>
+                </MotionElement>
               );
             })}
 
-            <div className="flex justify-end items-center lg:justify-end lg:items-end">
+            <MotionElement
+              variant="scale"
+              className="flex justify-end items-center lg:justify-end lg:items-end"
+            >
               <CircleButton
                 onClick={() =>
                   window.open(
@@ -90,7 +96,7 @@ export default function AboutRecommendations() {
                 text="Recommend me"
                 arrowDirection="up-right"
               />
-            </div>
+            </MotionElement>
           </div>
         </div>
       </div>

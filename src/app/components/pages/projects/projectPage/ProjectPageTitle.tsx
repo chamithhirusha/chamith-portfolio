@@ -1,4 +1,5 @@
 import Image from "next/image";
+import MotionElement from "../../../motion/MotionElement";
 
 interface Props {
   name: string;
@@ -10,14 +11,20 @@ export default function ProjectPageTitle({ name, year, thumbnail }: Props) {
   return (
     <div className="relative flex flex-col justify-end theme-default-padding-x theme-default-padding-y min-h-[600px] h-screen overflow-hidden">
       {/* BACKGROUND IMAGE (LCP OPTIMIZED) */}
-      <Image
-        src={`/${thumbnail}`}
-        alt={name}
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover"
-      />
+      <MotionElement
+        variant="scale"
+        duration={1.2}
+        className="absolute inset-0"
+      >
+        <Image
+          src={`/${thumbnail}`}
+          alt={name}
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover"
+        />
+      </MotionElement>
 
       {/* OVERLAY GRADIENT */}
       <div
@@ -37,17 +44,24 @@ export default function ProjectPageTitle({ name, year, thumbnail }: Props) {
 
       {/* CONTENT */}
       <div className="relative z-10">
-        <h2 className="text-end text-[18px] md:text-[24px] xl:text-[28px] theme-secondary">
+        <MotionElement
+          variant="slide-left"
+          className="text-end text-[18px] md:text-[24px] xl:text-[28px] theme-secondary"
+        >
           {year}
-        </h2>
+        </MotionElement>
 
         <hr className="theme-border-secondary mb-[25px] md:mb-[0px]" />
 
-        <div className="flex items-center h-[80px] md:h-[110px] leading-none">
+        <MotionElement
+          variant="clip"
+          delay={0.12}
+          className="flex items-center h-[80px] md:h-[110px] leading-none"
+        >
           <h1 className="font-moho-condensed text-[64px] md:text-[96px] xl:text-[128px] uppercase">
             {name}
           </h1>
-        </div>
+        </MotionElement>
 
         <hr className="theme-border-secondary mt-[25px] md:mt-[0px]" />
       </div>

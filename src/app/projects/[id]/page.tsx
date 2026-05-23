@@ -4,6 +4,7 @@ import ProjectPageTitle from "@/app/components/pages/projects/projectPage/Projec
 import ProjectPageGallery from "@/app/components/pages/projects/projectPage/ProjectPageGallery";
 import TextSlider from "@/app/components/sliders/TextSlider";
 import ProjectPageHighlights from "@/app/components/pages/projects/projectPage/ProjectPageHighlights";
+import MotionSection from "@/app/components/motion/MotionSection";
 import projects from "@/app/data/projects.json";
 
 interface Props {
@@ -21,19 +22,31 @@ export default async function ProjectPage({ params }: Props) {
 
   return (
     <>
-      <ProjectPageTitle
-        name={project.title}
-        year={project.year}
-        thumbnail={project.images.thumbnail}
-      />
-      <ProjectPageIntroduction
-        description={project.description}
-        details={project.details}
-      />
-      <TextSlider text="Gallery" />
-      <ProjectPageGallery imageFiles={project.images.imageFiles} />
-      <TextSlider text="Highlights" reverse />
-      <ProjectPageHighlights highlights={project.highlights} />
+      <MotionSection amount={0.1}>
+        <ProjectPageTitle
+          name={project.title}
+          year={project.year}
+          thumbnail={project.images.thumbnail}
+        />
+      </MotionSection>
+      <MotionSection>
+        <ProjectPageIntroduction
+          description={project.description}
+          details={project.details}
+        />
+      </MotionSection>
+      <MotionSection>
+        <TextSlider text="Gallery" />
+      </MotionSection>
+      <MotionSection>
+        <ProjectPageGallery imageFiles={project.images.imageFiles} />
+      </MotionSection>
+      <MotionSection>
+        <TextSlider text="Highlights" reverse />
+      </MotionSection>
+      <MotionSection>
+        <ProjectPageHighlights highlights={project.highlights} />
+      </MotionSection>
     </>
   );
 }

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Cursor from "./components/cursor/Cursor";
 import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
+import NavigationTransition from "./components/motion/NavigationTransition";
 import ScrollProvider from "./components/scroll-provider/ScrollProvider";
 import { Consolas, MohoCondensed } from "./fonts/fonts";
 import "./globals.css";
@@ -23,6 +24,7 @@ export default function RootLayout({
         className={`${Consolas.variable} ${MohoCondensed.variable} h-full antialiased`}
       >
         <Cursor />
+        <NavigationTransition />
         <ScrollProvider>
           <Header />
           <main>{children}</main>

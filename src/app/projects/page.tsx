@@ -1,6 +1,7 @@
 "use client";
 
 import { useMemo, useState } from "react";
+import MotionSection from "../components/motion/MotionSection";
 import ProjectsGrid from "../components/pages/projects/ProjectsGrid";
 import ProjectsTitle from "../components/pages/projects/ProjectsTitle";
 import projectsData from "@/app/data/projects.json";
@@ -33,16 +34,20 @@ export default function Projects() {
 
   return (
     <>
-      <ProjectsTitle
-        selectedRole={selectedRole}
-        setSelectedRole={setSelectedRole}
-        selectedYear={selectedYear}
-        setSelectedYear={setSelectedYear}
-        categoryOptions={categoryOptions}
-        yearOptions={yearOptions}
-      />
+      <MotionSection>
+        <ProjectsTitle
+          selectedRole={selectedRole}
+          setSelectedRole={setSelectedRole}
+          selectedYear={selectedYear}
+          setSelectedYear={setSelectedYear}
+          categoryOptions={categoryOptions}
+          yearOptions={yearOptions}
+        />
+      </MotionSection>
 
-      <ProjectsGrid selectedRole={selectedRole} selectedYear={selectedYear} />
+      <MotionSection>
+        <ProjectsGrid selectedRole={selectedRole} selectedYear={selectedYear} />
+      </MotionSection>
     </>
   );
 }

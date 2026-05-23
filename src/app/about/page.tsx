@@ -8,20 +8,39 @@ import AboutIntroduction from "../components/pages/about/AboutIntroduction";
 import AboutRecommendations from "../components/pages/about/AboutRecommendations";
 import AboutSkills from "../components/pages/about/AboutSkills";
 import AboutTitle from "../components/pages/about/AboutTitle";
+import MotionSection from "../components/motion/MotionSection";
 import TextSlider from "../components/sliders/TextSlider";
 
 export default function About() {
   return (
     <>
-      <AboutTitle />
-      <AboutIntroduction />
-      <TextSlider text="Resume / CV" id="resume" />
-      <AboutExpertiseArea />
-      <AboutExperience />
-      <AboutCertifications />
-      <AboutSkills />
-      <AboutRecommendations />
-      <AboutBanner />
+      <MotionSection>
+        <AboutTitle />
+      </MotionSection>
+      <MotionSection>
+        <AboutIntroduction />
+      </MotionSection>
+      <MotionSection>
+        <TextSlider text="Resume / CV" id="resume" />
+      </MotionSection>
+      <MotionSection>
+        <AboutExpertiseArea />
+      </MotionSection>
+      <MotionSection>
+        <AboutExperience />
+      </MotionSection>
+      <MotionSection>
+        <AboutCertifications />
+      </MotionSection>
+      <MotionSection>
+        <AboutSkills />
+      </MotionSection>
+      <MotionSection>
+        <AboutRecommendations />
+      </MotionSection>
+      <MotionSection>
+        <AboutBanner />
+      </MotionSection>
     </>
   );
 }

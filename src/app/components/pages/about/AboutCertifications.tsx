@@ -1,5 +1,6 @@
 import Badge from "../../badges/Badge";
 import { SpecialStarIcon } from "../../icons/Icons";
+import MotionElement from "../../motion/MotionElement";
 import certifications from "@/app/data/certifications.json";
 
 export default function AboutCertifications() {
@@ -24,7 +25,12 @@ export default function AboutCertifications() {
           <div className="flex flex-col w-full xl:w-9/12">
             {certifications.map((certification, index) => {
               return (
-                <div key={index} className="flex flex-col">
+                <MotionElement
+                  key={index}
+                  variant="slide-left"
+                  delay={index * 0.05}
+                  className="flex flex-col"
+                >
                   <div className="flex flex-col flex-col-reverse sm:flex-row sm:items-start sm:justify-between gap-[20px]">
                     {/* Content */}
                     <div className="flex gap-[14px] md:gap-[20px]">
@@ -67,7 +73,7 @@ export default function AboutCertifications() {
                   {index !== certifications.length - 1 && (
                     <hr className="theme-border-secondary mt-[24px] mb-[24px]" />
                   )}
-                </div>
+                </MotionElement>
               );
             })}
           </div>

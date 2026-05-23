@@ -13,6 +13,7 @@ import { useRouter } from "next/navigation";
 import Button from "../buttons/Button";
 import SocialMediaIcon from "../buttons/SocialMediaIcon";
 import profile from "@/app/data/profile.json";
+import MotionElement from "../motion/MotionElement";
 
 const Header = () => {
   const { push } = useRouter();
@@ -20,6 +21,16 @@ const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [hidden, setHidden] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [menuAnimKey, setMenuAnimKey] = useState(0);
+
+  const menuItems = [
+    { label: "Homepage", path: "/" },
+    { label: "Resume", path: "/about#resume" },
+    { label: "Projects", path: "/projects" },
+    { label: "Experience", path: "/about#experience" },
+    { label: "About", path: "/about" },
+    { label: "Contacts", path: "/contacts" },
+  ];
 
   const SOCIAL_LINKS = [
     { type: "whatsapp", link: profile.contact.whatsapp.href },
@@ -102,6 +113,7 @@ const Header = () => {
               alt="Logo"
               width={60}
               height={60}
+              loading="eager"
               className={`rounded-full brightness-90 contrast-110 transition-all duration-500 ${
                 scrolled
                   ? "w-10 h-10 sm:w-14 sm:h-14 grayscale"
@@ -131,6 +143,7 @@ const Header = () => {
           onClick={() => {
             setMenuOpen(true);
             setHidden(false);
+            setMenuAnimKey((v) => v + 1);
           }}
         >
           <MenuIcon
@@ -179,24 +192,31 @@ const Header = () => {
 
         {/* MENU ITEMS */}
         <div className="flex flex-col gap-[10px] md:gap-[20px]">
-          {[
-            { label: "Homepage", path: "/" },
-            { label: "Resume", path: "/about#resume" },
-            { label: "Projects", path: "/projects" },
-            { label: "Experience", path: "/about#experience" },
-            { label: "About", path: "/about" },
-            { label: "Contacts", path: "/contacts" },
-          ].map((item) => (
+          {menuItems.map((item, index) => (
             <div
               key={item.label}
               className="flex flex-col menu-text justify-center h-[60px] md:h-[80px] overflow-hidden clickable"
               onClick={() => navigate(item.path)}
             >
               <div className="flex flex-row items-center gap-5">
-                <SpecialStarIcon className="star size-2 md:size-4" />
-                <h2 className="font-moho-condensed text-[48px] sm:text-[64px] md:text-[80px] font-bold uppercase">
-                  {item.label}
-                </h2>
+                <MotionElement
+                  variant="slide-right"
+                  duration={0.5}
+                  delay={index / 5}
+                  playKey={menuAnimKey}
+                >
+                  <SpecialStarIcon className="star size-2 md:size-4" />
+                </MotionElement>
+                <MotionElement
+                  variant="slide-left"
+                  duration={0.8}
+                  delay={index / 5}
+                  playKey={menuAnimKey}
+                >
+                  <h2 className="font-moho-condensed text-[48px] sm:text-[64px] md:text-[80px] font-bold uppercase">
+                    {item.label}
+                  </h2>
+                </MotionElement>
               </div>
             </div>
           ))}
@@ -204,22 +224,36 @@ const Header = () => {
 
         {/* FOOTER */}
         <div className="flex flex-col gap-[30px]">
-          <Button
-            text="Book a call"
-            varient="secondary"
-            className="text-[16px] md:text-[18px] xl:text-[24px] uppercase py-[10px]! px-[30px]! gap-[5px] lg:gap-[8px]"
-            endIcon={<SolidCameraIcon className="size-6 lg:size-8" />}
-          />
+          <MotionElement
+            variant="rise"
+            duration={0.6}
+            delay={(menuItems.length + 1) / 5}
+            playKey={menuAnimKey}
+          >
+            <Button
+              text="Book a call"
+              varient="secondary"
+              className="text-[16px] w-full md:text-[18px] xl:text-[24px] uppercase py-[10px]! px-[30px]! gap-[5px] lg:gap-[8px]"
+              endIcon={<SolidCameraIcon className="size-6 lg:size-8" />}
+            />
+          </MotionElement>
 
           <div className="flex justify-center items-center gap-[5px] md:gap-[10px]">
-            {SOCIAL_LINKS.map((item) => (
-              <SocialMediaIcon
+            {SOCIAL_LINKS.map((item, index) => (
+              <MotionElement
                 key={item.type}
-                type={item.type}
-                link={item.link}
-                varient="secondary"
-                className="scale-60 md:scale-80"
-              />
+                variant="rise"
+                duration={0.6}
+                delay={(menuItems.length + 2) / 5 + index / 5}
+                playKey={menuAnimKey}
+              >
+                <SocialMediaIcon
+                  type={item.type}
+                  link={item.link}
+                  varient="secondary"
+                  className="scale-60 md:scale-80"
+                />
+              </MotionElement>
             ))}
           </div>
         </div>

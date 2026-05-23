@@ -1,7 +1,12 @@
+import MotionElement from "../../motion/MotionElement";
+
 export default function ContactLocation() {
   return (
     <div className="theme-default-padding-x theme-default-padding-y">
-      <div className="flex flex-col justify-center items-center h-[400px] lg:min-h-[600px] theme-bg-foreground theme-inverted-foreground rounded-[15px] w-full">
+      <MotionElement
+        variant="scale"
+        className="flex flex-col justify-center items-center h-[400px] lg:min-h-[600px] theme-bg-foreground theme-inverted-foreground rounded-[15px] w-full"
+      >
         <div className="w-full h-[400px] lg:h-[600px] rounded-[12px] overflow-hidden">
           <iframe
             title="Google Map Location"
@@ -12,7 +17,7 @@ export default function ContactLocation() {
             allowFullScreen
           />
         </div>
-      </div>
+      </MotionElement>
     </div>
   );
 }

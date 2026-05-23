@@ -9,6 +9,7 @@ import { SolidCameraIcon } from "../../icons/Icons";
 import Checkbox from "../../inputs/Checkbox";
 import TextArea from "../../inputs/TextArea";
 import TextField from "../../inputs/TextField";
+import MotionElement from "../../motion/MotionElement";
 import profile from "@/app/data/profile.json";
 
 export default function HomeContacts() {
@@ -164,7 +165,7 @@ export default function HomeContacts() {
 
       {/* LEFT */}
       <div className="flex flex-col w-full gap-[20px]">
-        <div className="mb-[50px]">
+        <MotionElement variant="scale" className="mb-[50px]">
           <Button
             text="Book a call"
             className="text-[18px] md:text-[24px] xl:text-[32px] uppercase py-[10px]! px-[30px]! gap-[5px] lg:gap-[8px]"
@@ -176,10 +177,15 @@ export default function HomeContacts() {
               )
             }
           />
-        </div>
+        </MotionElement>
 
         {contactData.map((item, index) => (
-          <div key={index} className="flex flex-col gap-[20px] w-full">
+          <MotionElement
+            key={index}
+            variant="slide-right"
+            delay={index * 0.07}
+            className="flex flex-col gap-[20px] w-full"
+          >
             <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-[10px] md:gap-[20px]">
               <h3 className="text-[16px] md:text-[18px] xl:text-[24px] font-bold theme-secondary uppercase">
                 {item.label}
@@ -195,12 +201,15 @@ export default function HomeContacts() {
             </div>
 
             <hr className="theme-border-secondary" />
-          </div>
+          </MotionElement>
         ))}
       </div>
 
       {/* RIGHT */}
-      <div className="flex flex-col w-full xl:w-5/8 theme-bg-overlay rounded-[10px] md:rounded-[20px] px-[20px] md:px-[40px] py-[10px] md:py-[20px] gap-[30px]">
+      <MotionElement
+        variant="slide-left"
+        className="flex flex-col w-full xl:w-5/8 theme-bg-overlay rounded-[10px] md:rounded-[20px] px-[20px] md:px-[40px] py-[10px] md:py-[20px] gap-[30px]"
+      >
         <div className="flex flex-col w-full">
           <TextField
             placeholder="Your Name"
@@ -253,7 +262,7 @@ export default function HomeContacts() {
           className="text-[18px] md:text-[24px] xl:text-[32px] uppercase py-[10px]! px-[10px]! mb-[20px]"
           onClick={handleSubmit}
         />
-      </div>
+      </MotionElement>
     </div>
   );
 }

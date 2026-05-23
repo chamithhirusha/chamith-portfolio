@@ -1,4 +1,5 @@
 import { SpecialStarIcon } from "@/app/components/icons/Icons";
+import MotionElement from "../../../motion/MotionElement";
 
 interface Props {
   highlights: {
@@ -14,7 +15,12 @@ export default function ProjectPageHighlights({ highlights }: Props) {
       <div className="flex flex-col">
         {highlights.map((highlight, index) => {
           return (
-            <div key={index} className="flex flex-col">
+            <MotionElement
+              key={index}
+              variant="slide-left"
+              delay={index * 0.06}
+              className="flex flex-col"
+            >
               <div className="flex flex-col flex-col-reverse sm:flex-row sm:items-start sm:justify-between gap-[20px]">
                 {/* Content */}
                 <div className="flex gap-[14px] md:gap-[20px]">
@@ -42,7 +48,7 @@ export default function ProjectPageHighlights({ highlights }: Props) {
               {index !== highlights.length - 1 && (
                 <hr className="theme-border-secondary mt-[24px] mb-[24px]" />
               )}
-            </div>
+            </MotionElement>
           );
         })}
       </div>

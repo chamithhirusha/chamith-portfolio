@@ -6,6 +6,7 @@ import {
   DatabaseIcon,
   PuzzlePieceIcon,
 } from "../../icons/Icons";
+import MotionElement from "../../motion/MotionElement";
 import services from "@/app/data/services.json";
 
 export default function HomeServices() {
@@ -46,13 +47,19 @@ export default function HomeServices() {
         const Icon = serviceItem.icon;
 
         return (
-          <div
+          <MotionElement
             key={index}
+            variant="tilt"
+            delay={index * 0.06}
             className="group flex flex-col gap-[20px] xl:gap-[60px]"
           >
             <div className="flex flex-col xl:flex-row justify-between items-start gap-[40px] md:gap-[60px]">
               {/* left side */}
-              <div className="clickable flex justify-center items-center gap-[30px] md:gap-[40px]">
+              <MotionElement
+                variant="slide-right"
+                delay={index * 0.06 + 0.08}
+                className="clickable flex justify-center items-center gap-[30px] md:gap-[40px]"
+              >
                 <div className="flex h-[96px] md:h-[120px] aspect-square border theme-border-secondary rounded-full items-center justify-center relative overflow-hidden">
                   {/* Main service icon */}
                   <Icon
@@ -95,19 +102,24 @@ export default function HomeServices() {
                     {serviceItem.title}
                   </h3>
                 </div>
-              </div>
+              </MotionElement>
 
               {/* right side */}
               <div className="flex flex-col gap-[20px] xl:gap-[30px] w-full xl:w-1/2">
                 {serviceItem.items.map((item, i) => (
-                  <div key={i} className="flex flex-col gap-[20px]">
+                  <MotionElement
+                    key={i}
+                    variant="slide-left"
+                    delay={index * 0.04 + i * 0.04}
+                    className="flex flex-col gap-[20px]"
+                  >
                     <h4 className="font-bold text-[18px] md:text-[24px] xl:text-[28px] theme-secondary">
                       {item}
                     </h4>
                     {i !== serviceItem.items.length - 1 && (
                       <hr className="theme-border-secondary" />
                     )}
-                  </div>
+                  </MotionElement>
                 ))}
               </div>
             </div>
@@ -132,7 +144,7 @@ export default function HomeServices() {
                 "
               />
             </div>
-          </div>
+          </MotionElement>
         );
       })}
     </div>

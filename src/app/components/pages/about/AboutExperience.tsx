@@ -1,4 +1,5 @@
 import Badge from "../../badges/Badge";
+import MotionElement from "../../motion/MotionElement";
 import experience from "@/app/data/experience.json";
 
 export default function AboutExperience() {
@@ -24,8 +25,10 @@ export default function AboutExperience() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-[40px] gap-y-[60px] xl:w-9/12">
             {experience.map((experience, index) => {
               return (
-                <div
+                <MotionElement
                   key={index}
+                  variant="tilt"
+                  delay={index * 0.07}
                   className="flex flex-col items-center md:items-start"
                 >
                   <div className="flex gap-[10px] mb-[10px] theme-secondary">
@@ -58,7 +61,7 @@ export default function AboutExperience() {
                       )}
                     </p>
                   </div>
-                </div>
+                </MotionElement>
               );
             })}
           </div>
