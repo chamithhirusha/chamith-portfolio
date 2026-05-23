@@ -30,8 +30,7 @@ export default function ProjectsTitle({
         </h1>
 
         <h2 className="text-center lg:text-start text-[18px] md:text-[24px] xl:text-[28px] theme-secondary">
-          View my curated selection of creative work, each piece expressing its
-          own story through distinctive design and artistic approach.
+          A showcase of digital products combining scalable backend systems, intuitive user experiences, and polished visual design.
         </h2>
       </div>
 

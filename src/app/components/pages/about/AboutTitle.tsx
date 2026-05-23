@@ -7,7 +7,7 @@ export default function AboutTitle() {
           <div className="flex items-center h-[80px] md:h-[160px]">About</div>
         </h1>
         <h2 className="text-center lg:text-start text-[18px] md:text-[24px] xl:text-[28px] theme-secondary">
-          7+ years of experience in the field of digital design working with
+          4+ years of experience in the field of digital design working with
           national and international clients.
         </h2>
       </div>

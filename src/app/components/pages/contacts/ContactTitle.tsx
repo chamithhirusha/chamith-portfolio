@@ -9,7 +9,7 @@ export default function ContactTitle() {
           </div>
         </h1>
         <h2 className="text-center lg:text-start text-[18px] md:text-[24px] xl:text-[28px] theme-secondary">
-          Let&apos;s connect and create something cool together!
+          Have a project in mind? Let&apos;s create something amazing together.
         </h2>
       </div>
       <hr className="theme-border-secondary mt-[25px] md:mt-[0px]" />
