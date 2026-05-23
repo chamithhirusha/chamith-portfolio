@@ -23,7 +23,7 @@ export default function MotionSection({
     hidden: {
       opacity: 0,
       y: reduceMotion ? 0 : 44,
-      filter: reduceMotion ? "none" : "blur(50px)",
+      filter: reduceMotion ? "none" : "blur(10px)",
     },
     visible: {
       opacity: 1,
