@@ -1,3 +1,5 @@
+import MotionElement from "../../../motion/MotionElement";
+
 interface Props {
   description: string;
   details: {
@@ -16,12 +18,19 @@ export default function ProjectPageIntroduction({
 }: Props) {
   return (
     <div className="flex flex-col gap-[50px] md:gap-[100px] theme-default-padding-x theme-default-padding-y">
-      <h3 className="text-[18px] md:text-[24px] xl:text-[28px] theme-secondary">
+      <MotionElement
+        variant="slide-right"
+        className="text-[18px] md:text-[24px] xl:text-[28px] theme-secondary"
+      >
         {description}
-      </h3>
+      </MotionElement>
 
       <div className="flex flex-col gap-[20px] w-full">
-        <div className="flex flex-col gap-[20px] w-full">
+        <MotionElement
+          variant="slide-left"
+          delay={0.04}
+          className="flex flex-col gap-[20px] w-full"
+        >
           <div className="flex flex-col sm:flex-row items-start gap-[20px] md:gap-[30px] lg:gap-[50px]">
             <h3 className="text-[16px] md:text-[18px] xl:text-[24px] mt-0 sm:mt-1 min-w-auto sm:min-w-[160px] lg:min-w-[180px] font-bold theme-secondary uppercase">
               Worked areas
@@ -31,9 +40,13 @@ export default function ProjectPageIntroduction({
             </h4>
           </div>
           <hr className="theme-border-secondary" />
-        </div>
+        </MotionElement>
 
-        <div className="flex flex-col gap-[20px] w-full">
+        <MotionElement
+          variant="slide-left"
+          delay={0.08}
+          className="flex flex-col gap-[20px] w-full"
+        >
           <div className="flex flex-col sm:flex-row items-start gap-[20px] md:gap-[30px] lg:gap-[50px]">
             <h3 className="text-[16px] md:text-[18px] xl:text-[24px] mt-0 sm:mt-1 min-w-auto sm:min-w-[160px] lg:min-w-[180px] font-bold theme-secondary uppercase">
               Role
@@ -43,9 +56,13 @@ export default function ProjectPageIntroduction({
             </h4>
           </div>
           <hr className="theme-border-secondary" />
-        </div>
+        </MotionElement>
 
-        <div className="flex flex-col gap-[20px] w-full">
+        <MotionElement
+          variant="slide-left"
+          delay={0.12}
+          className="flex flex-col gap-[20px] w-full"
+        >
           <div className="flex flex-col sm:flex-row items-start gap-[20px] md:gap-[30px] lg:gap-[50px]">
             <h3 className="text-[16px] md:text-[18px] xl:text-[24px] mt-0 sm:mt-1 min-w-auto sm:min-w-[160px] lg:min-w-[180px] font-bold theme-secondary uppercase">
               Duration
@@ -55,9 +72,13 @@ export default function ProjectPageIntroduction({
             </h4>
           </div>
           <hr className="theme-border-secondary" />
-        </div>
+        </MotionElement>
 
-        <div className="flex flex-col gap-[20px] w-full">
+        <MotionElement
+          variant="slide-left"
+          delay={0.16}
+          className="flex flex-col gap-[20px] w-full"
+        >
           <div className="flex flex-col sm:flex-row items-start gap-[20px] md:gap-[30px] lg:gap-[50px]">
             <h3 className="text-[16px] md:text-[18px] xl:text-[24px] mt-0 sm:mt-1 min-w-auto sm:min-w-[160px] lg:min-w-[180px] font-bold theme-secondary uppercase">
               Tech Stack
@@ -67,16 +88,25 @@ export default function ProjectPageIntroduction({
             </h4>
           </div>
           <hr className="theme-border-secondary" />
-        </div>
+        </MotionElement>
 
-        <div className="flex flex-col gap-[20px] w-full">
+        <MotionElement
+          variant="slide-left"
+          delay={0.2}
+          className="flex flex-col gap-[20px] w-full"
+        >
           <div className="flex flex-col sm:flex-row sm:items-center gap-[20px] md:gap-[30px] lg:gap-[50px]">
             <h3 className="text-[16px] md:text-[18px] xl:text-[24px] min-w-auto sm:min-w-[160px] lg:min-w-[180px] font-bold theme-secondary uppercase">
               Theme
             </h3>
             <div className="flex gap-[20px] flex-wrap">
               {details.colors.map((color, index) => (
-                <div key={index} className="relative group cursor-pointer">
+                <MotionElement
+                  key={index}
+                  variant="scale"
+                  delay={index * 0.03}
+                  className="relative group cursor-pointer"
+                >
                   <div
                     className="size-6 md:size-8 rounded-full transition-transform duration-200 group-hover:scale-110 border border-white/20"
                     style={{ backgroundColor: color }}
@@ -93,14 +123,18 @@ export default function ProjectPageIntroduction({
                   >
                     {color}
                   </div>
-                </div>
+                </MotionElement>
               ))}
             </div>
           </div>
           <hr className="theme-border-secondary" />
-        </div>
+        </MotionElement>
 
-        <div className="flex flex-col gap-[20px] w-full">
+        <MotionElement
+          variant="slide-left"
+          delay={0.24}
+          className="flex flex-col gap-[20px] w-full"
+        >
           <div className="flex flex-col sm:flex-row items-start gap-[20px] md:gap-[30px] lg:gap-[50px]">
             <h3 className="text-[16px] md:text-[18px] xl:text-[24px] mt-0 sm:mt-1 min-w-auto sm:min-w-[160px] lg:min-w-[180px] font-bold theme-secondary uppercase">
               Features
@@ -109,7 +143,7 @@ export default function ProjectPageIntroduction({
               {details.features.join(", ")}
             </h4>
           </div>
-        </div>
+        </MotionElement>
       </div>
     </div>
   );

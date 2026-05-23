@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import Badge from "@/app/components/badges/Badge";
 import CircleButton from "@/app/components/buttons/CircleButton";
 import { ArrowDownLeftIcon } from "@/app/components/icons/Icons";
+import MotionElement from "@/app/components/motion/MotionElement";
 import { useRouter } from "next/navigation";
 import projects from "@/app/data/projects.json";
 
@@ -54,8 +55,10 @@ export default function HomeLatestProjects() {
     >
       <div className="flex flex-col gap-[25px] md:gap-[50px]">
         {projects.slice(0, 4).map((project, i) => (
-          <div
+          <MotionElement
             key={i}
+            variant={i % 2 === 0 ? "slide-right" : "slide-left"}
+            delay={i * 0.08}
             onMouseEnter={() => startRotation(i)}
             onMouseLeave={stopRotation}
             onClick={() => push(`/projects/${project.id}`)}
@@ -131,18 +134,18 @@ export default function HomeLatestProjects() {
                 />
               </div>
             </div>
-          </div>
+          </MotionElement>
         ))}
       </div>
 
       {/* BUTTON */}
-      <div className="flex justify-center">
+      <MotionElement variant="scale" className="flex justify-center">
         <CircleButton
           onClick={() => push("/projects")}
           text="All Works"
           arrowDirection="up-right"
         />
-      </div>
+      </MotionElement>
     </div>
   );
 }

@@ -6,6 +6,7 @@ import {
   DatabaseIcon,
   PuzzlePieceIcon,
 } from "../../icons/Icons";
+import MotionElement from "../../motion/MotionElement";
 
 export default function AboutExpertiseArea() {
   const expertiseAreas = [
@@ -57,7 +58,12 @@ export default function AboutExpertiseArea() {
             const Icon = area.icon;
 
             return (
-              <div key={index} className="flex flex-col">
+              <MotionElement
+                key={index}
+                variant="tilt"
+                delay={index * 0.06}
+                className="flex flex-col"
+              >
                 <div className="mb-[20px]">
                   <div className="flex h-[64px] md:h-[76px] aspect-square border theme-border-secondary rounded-full items-center justify-center overflow-hidden">
                     <Icon
@@ -78,7 +84,7 @@ export default function AboutExpertiseArea() {
                     {area.description}
                   </p>
                 </div>
-              </div>
+              </MotionElement>
             );
           })}
         </div>

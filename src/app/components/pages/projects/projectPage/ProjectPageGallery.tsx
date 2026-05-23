@@ -1,4 +1,5 @@
 import Image from "next/image";
+import MotionElement from "../../../motion/MotionElement";
 
 interface Props {
   imageFiles: string[];
@@ -14,7 +15,12 @@ export default function ProjectPageGallery({ imageFiles }: Props) {
       {top.length > 0 && (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-0">
           {top.map((src, i) => (
-            <div key={i} className="aspect-[4/5] relative">
+            <MotionElement
+              key={i}
+              variant="scale"
+              delay={i * 0.06}
+              className="aspect-[4/5] relative"
+            >
               <Image
                 src={`/${src}`}
                 alt={`img-${i}`}
@@ -23,13 +29,13 @@ export default function ProjectPageGallery({ imageFiles }: Props) {
                 className="object-cover"
                 priority={i === 0} // optional: only first image eager
               />
-            </div>
+            </MotionElement>
           ))}
         </div>
       )}
 
       {middle.length > 0 && (
-        <div className="w-full">
+        <MotionElement variant="clip" className="w-full">
           <div className="aspect-[16/6] relative w-full">
             <Image
               src={`/${middle[0]}`}
@@ -40,14 +46,18 @@ export default function ProjectPageGallery({ imageFiles }: Props) {
               priority // LCP candidate
             />
           </div>
-        </div>
+        </MotionElement>
       )}
 
       {bottom.length > 0 && (
         <div className="grid grid-cols-1 md:grid-cols-5 gap-0">
           {bottom.map((src, i) =>
             i === 0 ? (
-              <div key={i} className="md:col-span-4 aspect-[16/9] relative">
+              <MotionElement
+                key={i}
+                variant="slide-right"
+                className="md:col-span-4 aspect-[16/9] relative"
+              >
                 <Image
                   src={`/${src}`}
                   alt={`bottom-${i}`}
@@ -55,9 +65,14 @@ export default function ProjectPageGallery({ imageFiles }: Props) {
                   sizes="(max-width: 768px) 100vw, 80vw"
                   className="object-cover"
                 />
-              </div>
+              </MotionElement>
             ) : (
-              <div key={i} className="md:col-span-1 aspect-[16/9] relative">
+              <MotionElement
+                key={i}
+                variant="slide-left"
+                delay={0.08}
+                className="md:col-span-1 aspect-[16/9] relative"
+              >
                 <Image
                   src={`/${src}`}
                   alt={`bottom-${i}`}
@@ -65,7 +80,7 @@ export default function ProjectPageGallery({ imageFiles }: Props) {
                   sizes="(max-width: 768px) 100vw, 20vw"
                   className="object-cover"
                 />
-              </div>
+              </MotionElement>
             ),
           )}
         </div>

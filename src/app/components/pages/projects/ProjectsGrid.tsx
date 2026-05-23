@@ -3,6 +3,7 @@ import { ArrowDownLeftIcon } from "../../icons/Icons";
 import Badge from "../../badges/Badge";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import MotionElement from "../../motion/MotionElement";
 import projects from "@/app/data/projects.json";
 
 interface Props {
@@ -73,8 +74,10 @@ export default function ProjectsGrid({ selectedRole, selectedYear }: Props) {
     <div className="theme-default-padding-x theme-default-padding-y">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-[25px] md:gap-[50px]">
         {filteredProjects.map((project, i) => (
-          <div
+          <MotionElement
             key={i}
+            variant={i % 2 === 0 ? "slide-right" : "slide-left"}
+            delay={(i % 6) * 0.05}
             onMouseEnter={() => startRotation(i)}
             onMouseLeave={stopRotation}
             onClick={() => push(`/projects/${project.id}`)}
@@ -151,7 +154,7 @@ export default function ProjectsGrid({ selectedRole, selectedYear }: Props) {
                 />
               </div>
             </div>
-          </div>
+          </MotionElement>
         ))}
       </div>
     </div>

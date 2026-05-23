@@ -18,7 +18,13 @@
 /* ========================================================================
      BASE ELEMENTS
      ======================================================================== */
+html {
+  margin: 0;
+  padding: 0;
+}
 body {
+  margin: 0;
+  padding: 0;
   background: var(--theme-background);
   color: var(--theme-foreground);
   font-family: var(--font-consolas), Helvetica, sans-serif;
@@ -403,6 +409,79 @@ body {
   );
 }
 
+/* ========================================================================
+     LOADING / MOTION
+     ======================================================================== */
+.portfolio-loader {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.portfolio-loader span {
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: var(--theme-foreground);
+  animation: loader-pulse 0.9s ease-in-out infinite;
+}
+
+.portfolio-loader span:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.portfolio-loader span:nth-child(3) {
+  animation-delay: 0.24s;
+}
+
+.route-transition-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.route-transition-overlay span {
+  display: block;
+  background: var(--theme-foreground);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.route-transition-overlay span:nth-child(2) {
+  transform-origin: right;
+}
+
+.route-transition-overlay.is-active {
+  visibility: visible;
+}
+
+.route-transition-overlay.is-active span {
+  animation: route-wipe 0.72s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.route-transition-overlay.is-active span:nth-child(2) {
+  animation-delay: 0.06s;
+}
+
+.route-transition-overlay.is-active span:nth-child(3) {
+  animation-delay: 0.12s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
 @keyframes pulse-outline {
   0% {
     transform: scale(1);
@@ -415,6 +494,33 @@ body {
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+@keyframes route-wipe {
+  0% {
+    transform: scaleX(0);
+    opacity: 1;
+  }
+  45% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 0;
+  }
+}
+
+@keyframes loader-pulse {
+  0%,
+  100% {
+    opacity: 0.35;
+    transform: translateY(0) scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(-10px) scale(1);
   }
 }
 
