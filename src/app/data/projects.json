@@ -60,64 +60,6 @@
   },
   {
     "id": "1",
-    "title": "S.A.M.",
-    "description": "An art management system designed to streamline the organization and curation of art collections. The system provides features such as inventory management, exhibition planning, and artist collaboration tools.",
-    "year": "2024",
-    "category": "FULL - STACK",
-    "images": {
-      "thumbnail": "images/projects/sam-app/img2.png",
-      "imageFiles": [
-        "images/projects/sam-app/img1.png",
-        "images/projects/sam-app/img2.png",
-        "images/projects/sam-app/img3.png"
-      ]
-    },
-    "details": {
-      "workedAreas": [
-        "UI/UX Design",
-        "Frontend Development",
-        "Backend Development"
-      ],
-      "role": "Full Stack Developer",
-      "duration": "8 months",
-      "technologies": ["React", "Node.js", "Express", "MongoDB"],
-      "features": [
-        "Inventory Management",
-        "Exhibition Planning",
-        "Artist Collaboration Tools",
-        "User-friendly Interface",
-        "Secure Authentication"
-      ],
-      "colors": [
-        "#8947F9",
-        "#FFFFFF",
-        "#BD1F41",
-        "#EADFFC",
-        "#000000",
-        "#FE9900"
-      ]
-    },
-    "highlights": [
-      {
-        "title": "Inventory Management",
-        "description": "The system provides robust inventory management features, allowing users to catalog and track their art collections with ease.",
-        "year": "2024"
-      },
-      {
-        "title": "Exhibition Planning",
-        "description": "S.A.M. includes tools for planning and organizing exhibitions, enabling users to create detailed exhibition layouts and schedules.",
-        "year": "2024"
-      },
-      {
-        "title": "Artist Collaboration Tools",
-        "description": "The platform facilitates collaboration between artists, curators, and collectors, providing tools for communication and project management.",
-        "year": "2024"
-      }
-    ],
-    "tags": ["React", "Next.js"]
-  },
-  {
-    "id": "2",
     "title": "Digital Banking",
     "description": "A digital banking application designed to provide a seamless online banking experience. The app features a user-friendly interface, secure payment processing, and a wide range of financial services.",
     "year": "2024",
@@ -167,7 +109,7 @@
     "tags": ["React", "Next.js"]
   },
   {
-    "id": "3",
+    "id": "2",
     "title": "E-commerce Platform",
     "description": "An e-commerce platform dedicated to the sale of vehicle spare parts. The platform offers a wide selection of products, secure payment options, and efficient delivery services to cater to the needs of automotive enthusiasts and repair shops.",
     "year": "2023",
@@ -226,7 +168,7 @@
     "tags": ["React", "Next.js"]
   },
   {
-    "id": "4",
+    "id": "3",
     "title": "CodeLK Website",
     "description": "A modern website for CodeLK, showcasing their services and portfolio. The site features a responsive design, intuitive navigation, and a clean aesthetic to provide an excellent user experience.",
     "year": "2023",
@@ -270,6 +212,7 @@
         "description": "The website boasts a clean and modern aesthetic that enhances the overall user experience and showcases the services effectively.",
         "year": "2024"
       }
-    ]
+    ],
+    "tags": ["React", "Next.js"]
   }
 ]
